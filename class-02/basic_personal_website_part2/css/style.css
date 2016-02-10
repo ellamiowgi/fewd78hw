@@ -1,0 +1,86 @@
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+.container {
+	max-width: 800px;
+	font-size: 0;
+}
+
+.left_column {
+	max-width: 500px;
+	display: inline-block;
+}
+
+.right_column {
+	max-width: 280px;
+	margin-left: 20px;
+	display: inline-block;
+	font-size: initial;
+	vertical-align: top;
+}
+
+img {
+	max-width: 100%;
+	padding: 5px;
+}
+
+nav {
+	text-decoration: none;
+	text-align: right;
+	padding: 10px;
+}
+
+nav a {
+	padding-left: 30px;
+	text-decoration: none;
+}
+
+
+nav a:visited {
+	color: gray;
+}
+
+nav a:hover {
+	color: rgb(133, 164, 165);
+}
+
+h1 {
+	font-weight: 900;
+	font-size: 30px;
+	margin-top: 30px;
+}
+
+h2 {
+	font-size: 15px;
+	margin-top: 5px;
+}
+
+p {
+	margin-top: 70px;
+}
+
+/*span for the bonus!*/
+span {
+	font-size: 20pt;
+}
+
+h3 {
+	margin-top: 70px;
+}
+
+.icon {
+	margin-top: 20px;
+	max-width: 50px;
+}
+
+footer {
+	margin-top: 20px;
+	font-size: 10px;
+}
+
+
+/*.social_icons {
+	max-width: 70px;
+	display: inline-block;*/
+}
