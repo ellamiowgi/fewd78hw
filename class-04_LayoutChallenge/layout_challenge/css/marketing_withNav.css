@@ -1,0 +1,71 @@
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.logo {
+	background: lightgray;
+	height: 100px;
+	width: 150px;
+	border: 2px solid darkgray;
+	margin-bottom: 2%;
+	float: left;
+}
+
+nav {
+	float: right;
+}
+
+nav a {
+	display: inline-block;
+	height: 40px;
+	width: 90px;
+	background-color: lightgray;
+	border: 2px solid darkgray;
+	margin-top: 20px;
+	margin-left: 5px;
+}
+
+main {
+	background: lightgray;
+	height: 250px;
+	width: 99%;
+	border: 2px solid darkgray;
+	margin-bottom: 2%;
+	float: left;
+}
+
+.section1 {
+	background: lightgray;
+	height: 100px;
+	width: 31%;
+	border: 2px solid darkgray;
+	margin-bottom: 2%;
+	margin-right: 2%;
+	float: left;
+}
+
+.section2 {
+	background: lightgray;
+	height: 100px;
+	width: 32%;
+	border: 2px solid darkgray;
+	margin-bottom: 2%;
+	float: left;
+}
+
+.section3 {
+	background: lightgray;
+	height: 100px;
+	width: 31%;
+	border: 2px solid darkgray;
+	margin-bottom: 2%;
+	float: right;
+}
+
+footer {
+	background: lightgray;
+	height: 100px;
+	border: 2px solid darkgray;
+	clear: both;
+}

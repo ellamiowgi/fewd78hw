@@ -1,0 +1,36 @@
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+header {
+	background: lightgray;
+	height: 100px;
+	border: 2px solid darkgray;
+}
+
+main {
+	background: lightgray;
+	height: 250px;
+	float: left;
+	width: 66%;
+	border: 2px solid darkgray;
+	margin-top: 2.5%;
+}
+
+aside {
+	background: lightgray;
+	height: 250px;
+	float: right;
+	width: 30%;
+	border: 2px solid darkgray;
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
+}
+
+footer {
+	background: lightgray;
+	height: 100px;
+	border: 2px solid darkgray;
+	clear: both;
+}

@@ -1,0 +1,46 @@
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+header {
+	background: lightgray;
+	height: 100px;
+	border: 2px solid darkgray;
+}
+
+.left {
+	background: lightgray;
+	height: 250px;
+	width: 14%;
+	border: 2px solid darkgray;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	float: left;
+}
+
+main {
+	background: lightgray;
+	height: 250px;
+	width: 66%;
+	border: 2px solid darkgray;
+	margin: 2%;
+	float: left;
+}
+
+.right {
+	background: lightgray;
+	height: 250px;
+	width: 14%;
+	border: 2px solid darkgray;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	float: right;
+}
+
+footer {
+	background: lightgray;
+	height: 100px;
+	border: 2px solid darkgray;
+	clear: both;
+}
