@@ -42,12 +42,13 @@ nav a {
 	margin-bottom: 2%;
 	float: left;
 	clear: both;
+	/*why does this get funky if i remove the clear on line 44?*/
 }
 
 header {
 	background: lightgray;
-	height: 100px;
-	width: 75%;
+	height: 75px;
+	width: 80%;
 	border: 2px solid darkgray;
 	margin-bottom: 2%;
 	float: right;
@@ -55,47 +56,59 @@ header {
 
 main {
 	background: lightgray;
-	height: 250px;
+	height: 325px;
 	width: 60%;
 	border: 2px solid darkgray;
 	margin-bottom: 2%;
+	margin-left: 2%;
 	float: left;
-	clear: both;
+	/*clear: both;*/
 }
 
 .right {
 	background: lightgray;
-	height: 250px;
-	width: 17%;
+	height: 325px;
+	width: 18%;
 	border: 2px solid darkgray;
 	margin-bottom: 2%;
 	float: right;
-	clear: both;
+	/*clear: both;*/
 }
 
 .section1 {
 	background: lightgray;
-	height: 100px;
-	width: 31%;
+	height: 150px;
+	width: 18%;
+	border: 2px solid darkgray;
+	margin-bottom: 2%;
+	margin-right: 2%;
+	margin-left: 2%;
+	float: left;
+}
+
+.section2 {
+	background: lightgray;
+	height: 150px;
+	width: 18%;
 	border: 2px solid darkgray;
 	margin-bottom: 2%;
 	margin-right: 2%;
 	float: left;
 }
 
-.section2 {
+.section3 {
 	background: lightgray;
-	height: 100px;
-	width: 32%;
+	height: 150px;
+	width: 18%;
 	border: 2px solid darkgray;
 	margin-bottom: 2%;
 	float: left;
 }
 
-.section3 {
+.section4 {
 	background: lightgray;
-	height: 100px;
-	width: 31%;
+	height: 150px;
+	width: 18%;
 	border: 2px solid darkgray;
 	margin-bottom: 2%;
 	float: right;
@@ -103,7 +116,7 @@ main {
 
 footer {
 	background: lightgray;
-	height: 100px;
+	height: 75px;
 	border: 2px solid darkgray;
 	clear: both;
 }
