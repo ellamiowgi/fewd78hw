@@ -1,0 +1,206 @@
+/*
+
+300 light
+    light italic
+600 semibold
+800 extrabold
+
+background color: #f0efef
+yellow: #f9e42e
+dark blue: #033048
+light grey: #606161
+almost black: #121212
+
+*/
+
+body {
+	font-family: "Open+Sans", sans-serif;
+	background-color: #f0efef;
+	color: #033048;
+}
+
+.container {
+	max-width: 95%;
+	margin: 0 auto;
+}
+
+header {
+	height: 96px;
+	width: 100%;
+	background-color: #033048;
+}
+
+.logo {
+	font-weight: 800;
+	font-size: 48px;
+	color: white;
+	float: left;
+	padding: 2.5% 0% 0% 5%;
+	/*width: 30%;*/
+}
+
+nav {
+	/*there's an issue when i select "display" under reset on css*/
+	float: right;
+	padding-top: 4%;
+	width: 50%;
+	/*display: inherit;*/
+}
+
+a {
+	/*display: inline-block;*/
+	font-weight: 600;
+	font-size: 24px;
+	text-decoration: none;
+	color: #f9e42e;
+	padding-right: 4%;
+	clear: both;
+}
+
+main {
+	width: 73%;
+	margin-right: 2%;
+	float: left;
+	box-sizing: border-box;
+	padding-left: 3%;
+	/*padding-top: 50px;*/
+}
+
+article {
+
+}
+
+.post {
+	color: #606161;
+}
+
+.firstCharacter {
+	font-size: 60px;
+	color: #606161;
+	float: left;
+	padding-right: 10px;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: 600;
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+
+.figure {
+	/*box-sizing: border-box;*/
+}
+
+figure img {
+	max-width: 100%;
+	width: 100%;
+}
+
+.post {
+	font-size: 24px;
+	font-weight: 300;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.readMore {
+	font-size: 24px;
+	font-weight: 600;
+	text-align: right;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #606161;
+}
+
+.about_copy {
+	font-size: 22px;
+	font-weight: 300;
+	padding: 2px;
+}
+
+.learnMore {
+	font-size: 22px;
+	font-weight: 600;
+}
+
+h2 {
+	font-size: 32px;
+	font-weight: 800;
+	margin-bottom: 20px;
+}
+
+li {
+	font-size: 24px;
+	font-weight: 300;
+	padding: 2px;
+}
+
+aside {
+	width: 25%;
+	box-sizing: border-box;
+	float: right;
+}
+
+.categories {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+
+.adUnit {
+	margin-top: 40px;
+}
+.signUpNow {
+	display: block;
+	height: 50px;
+	width: 100%;
+	background-color: #f9e42e;
+	padding-top: 20px;
+}
+
+button {
+	margin: 0 auto;
+	display: block;
+	background-color: #033048;
+	padding: 10px 40px;
+	color: white;
+	font-weight: 600;
+	border-radius: 5px;
+	border: 0;
+}
+
+.footRelaxr {
+	font-size: 48px;
+	font-weight: 600;
+	color: #f9e42e;
+	text-align: center;
+	background-color: #121212;
+	padding-top: 50px;
+}
+
+.socialIcons {
+	text-align: center;
+	background-color: #121212;
+	padding-top: 50px;
+	display: block;
+}
+
+.copyright {
+	text-align: center;
+	color: white;
+	font-size: 10px;
+	font-weight: 300;
+	background-color: #121212;
+	padding-top: 50px;
+}
+
+.socialIcons img {
+	padding: 10px;
+}
+
+footer {
+	margin-top: 75px;
+/*	why isn't the margin working? and why is it bleeding into the container? why does the container not envelop the content for a height?
+*/	clear: both;
+}
+
