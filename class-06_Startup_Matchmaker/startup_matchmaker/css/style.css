@@ -1,0 +1,115 @@
+/*
+
+400 Source Sans Pro
+700 Source Sans Pro
+700 Merriweather
+700 Oswald
+
+background color: #fff
+yellow: #fdf731
+black: #000
+grey: #c6c6c6
+Semi-transparent box: 85% (alpha)..plus find the rgb values for white
+grey border: #ddd
+
+*/
+
+body {
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 400;
+	background: #fff;
+}
+
+.container {
+	width: 98%;
+	margin: 0 auto;
+}
+
+header {
+	height: 120px;
+	background-color: #000;
+	border-bottom: 5px solid #fdf731;
+}
+
+.logo {
+	color: #fdf731;
+	font-size: 30px;
+	font-family: "Merriweather";
+	font-weight: 700;
+	padding: 20px 0 30px 25px;
+}
+
+.logo a:visited {
+	color: #fdf731;
+}
+
+nav {
+	text-align: right;
+	font-family: sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav a {
+	font-size: 20px;
+	color: white;
+	padding-right: 15px;
+}
+
+nav a:visited {color: white;}  /* visited link */
+nav a:hover {background-color: #c6c6c6;}  /* mouse over link */
+nav a:active {color: #666;}  /* selected link */
+
+.navDevDes {
+	font-family: "Oswald";
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.navHowTeamBlog {
+	font-family: "Source Sans";
+	font-weight: normal;
+}
+
+.tagline {
+	font-size: 25px;
+	font-family: "Merriweather";
+	font-weight: 700;
+	font-style: italic;
+}
+
+h2 {
+	font-size: 30px;
+	font-family: "Source Sans";
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 25px;
+	font-family: "Merriweather";
+	font-weight: 700;
+}
+
+p {
+	font-size: 20px;
+	font-family: "Source Sans";
+	font-weight: 400;
+}
+
+button {
+	font-size: 20px;
+	font-family: "Oswald";
+	font-weight: 700;
+}
+
+button:active {
+	background-color: #666
+}
+
+footer {
+	font-size: 20px;
+	font-family: "Source Sans";
+	font-weight: normal;
+}
