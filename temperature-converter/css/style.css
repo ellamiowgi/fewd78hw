@@ -1,0 +1,12 @@
+
+body {
+	background: #10d7af
+}
+
+.container {
+	margin-left: 20px;
+	font-family: amatic SC, cursive;
+  	font-size: 2em;
+  	line-height:1;
+  	/*color: white;*/
+}

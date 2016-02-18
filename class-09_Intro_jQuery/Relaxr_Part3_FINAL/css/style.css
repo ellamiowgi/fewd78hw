@@ -67,11 +67,7 @@ main {
 }
 
 article {
-
-}
-
-.post {
-	color: #606161;
+	border-bottom: 1px solid #606161;
 }
 
 .firstCharacter {
@@ -97,22 +93,27 @@ figure img {
 	width: 100%;
 }
 
-.post {
+.post,
+.post1para2,
+.post2para2 {
+	color: #606161;
 	font-size: 24px;
 	font-weight: 300;
 	margin-top: 20px;
 	margin-bottom: 40px;
 }
 
-.readMore {
+.readMore,
+.readLess {
 	font-size: 24px;
 	font-weight: 600;
 	text-align: right;
 	padding-bottom: 30px;
-	border-bottom: 1px solid #606161;
 }
 
-.about_copy {
+
+.about_copy,
+.extraLine {
 	font-size: 22px;
 	font-weight: 300;
 	padding: 2px;
