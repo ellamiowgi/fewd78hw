@@ -1,16 +1,3 @@
-// FAHRENHEIT 
-// < 10 --> white
-// >10 and <30 --> light blue
-// >30 and <60 --> blue
-// >60 and <85 --> green
-// >85 ---> red 
-
-
-
-
-
-
-
 document.getElementById('fahrenheit').onkeyup = convertToCelsius;
 
 function convertToCelsius () {
