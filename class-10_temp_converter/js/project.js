@@ -35,6 +35,8 @@ function convertToCelsius() {
 		$('body').css('background-color', 'mediumseagreen');
 	} else if (fahrenheit >= 85) {
 		$('body').css('background-color', 'mediumvioletred');
+	} else {
+		alert("yada alert yada")
 	}
 }
 
