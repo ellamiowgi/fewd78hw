@@ -1,0 +1,23 @@
+CODE GRAY
+We craft beautiful code for web and mobile / a range of digital products.
+
+I like the sticky nav and "one page" of this one (and the "process" section):
+http://michaelpumo.com/
+
+I like the load in animation of this one:
+http://minimalmonkey.com/
+
+The animations on this one are neat:
+http://www.czk.fr/
+
+
+Proposed Sections: 
+Landing Page
+About
+Selected Projects / Brands / Clients
+Skills/Services
+Contact
+
+Requirements:
+easy to update the "projects" sectiom
+
