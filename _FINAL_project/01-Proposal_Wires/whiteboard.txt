@@ -1,5 +1,8 @@
 CODE GRAY
-We craft beautiful code for web and mobile / a range of digital products.
+We craft beautiful responsive code for web and mobile.
+
+I love the lil' animations on this home page:
+http://pierre.io/  
 
 I like the sticky nav and "one page" of this one (and the "process" section):
 http://michaelpumo.com/
@@ -11,13 +14,18 @@ The animations on this one are neat:
 http://www.czk.fr/
 
 
+I like the lil' easter eggs in this one:
+http://www.tsimenis.com/
+
+
+
+
 Proposed Sections: 
-Landing Page
+Landing Page 
 About
 Selected Projects / Brands / Clients
 Skills/Services
 Contact
 
 Requirements:
-easy to update the "projects" sectiom
-
+easy to update the "projects" section
