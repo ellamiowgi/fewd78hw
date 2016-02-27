@@ -1,9 +1,12 @@
-var listItems = document.getElementsByTagName('li');
+(function() {
 
-onListItemClick = function(e) {
-	alert("My beautiful ella is " + e.currentTarget.innerHTML);
-}
+	var listItems = document.getElementsByTagName('li');
 
-for (var i = 0; i < listItems.length; i++) {
-	listItems[i].addEventListener('click', onListItemClick);
-}
+	onListItemClick = function(e) {
+		alert("My beautiful ella is " + e.currentTarget.innerHTML);
+	}
+
+	for (var i = 0; i < listItems.length; i++) {
+		listItems[i].addEventListener('click', onListItemClick);
+	}
+})()
