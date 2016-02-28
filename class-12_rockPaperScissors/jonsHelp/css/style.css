@@ -102,70 +102,42 @@ h2 {
   margin-top: 20px;
 }
 
-
-#modal {
-    display: none;  /*Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(248, 248, 255, .5);
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(240,240,240,0.3);
 }
 
-#modal.isActive {
+.modal.isActive {
   display: block;
 }
 
-.modal_inner {
-    background-color: black;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid white;
-    width: 50%; /* Could be more or less, depending on screen size */
-    max-width: 300px;
+.modal__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px 140px;
+  background-color: #000;
 }
 
-.modal_whoWon {
-  font-size: 35px;
-  margin-top: 20px;
-}
-
-.left_user_result_image {
-  display: inline-block;
-  margin-left: 40px;
-  margin-right: 30px;
-  /*float: left;*/
-  /*width: 50%;*/
-}
-
-.right_computer_result_image {
-  display: inline-block;
-  margin-right: 80px;
-  /*float: right;*/
-  /*width: 50%;*/
-}
-
-.left_user_result_copy {
-  /*clear: both;*/
-  font-size: 20px;
-  display: inline-block;
-  padding-right: 40px;
-
-}
-
-.right_user_result_copy {
-  font-size: 20px;
-  display: inline-block;
-}
-
-.next_round_btn {
+.images {
+  font-size: 0;
   display: block;
+  width: 150px;
   margin: 0 auto;
 }
 
+.images > * {
+  display: inline-block;
+  font-size: initial;
+  width: 50%;
+}
 
 .round-indicator {
   display: block;
@@ -186,8 +158,3 @@ h2 {
   border: 1px solid #fff;
   border-radius: 50%;
 }
-
-
-
-
-

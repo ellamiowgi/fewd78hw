@@ -39,7 +39,7 @@ $('.choices button').on('click', function() {
 	console.log(userChoice);
 	console.log(computerChoice);
 	getWinner();
-}); 
+});
 
 
 // compare user and computer choice to get winner
@@ -47,7 +47,7 @@ function getWinner() {
 	var result = '';
 	if (userChoice === 'rock') {
 		if (computerChoice === 'rock') {
-			result = 'Tie';
+			result = 'Its a Tie';
 		} else if (computerChoice === 'paper') {
 			result = 'You Lose';
 			computerScore++;
@@ -60,7 +60,7 @@ function getWinner() {
 			result = 'You Win';
 			userScore++;
 		} else if (computerChoice === 'paper') {
-			result = 'Tie';
+			result = 'Its a Tie';
 		} else if (computerChoice === 'scissors') {
 			result = 'You Lose';
 			computerScore++;
@@ -73,17 +73,17 @@ function getWinner() {
 			result = 'You Win';
 			userScore++;
 		} else if (computerChoice === 'scissors') {
-			result = 'Tie';
+			result = 'Its a Tie';
 		}
 	}
 	// show the result
 	// $('#status').html('You chose '+userChoice+'. Computer chose '+ computerChoice+'. '+result+'.');
 	// console.log(result);
-	$('.modal_whoWon').html(result);
-	$('.left_user_result_image').attr('src', 'images/' + userChoice + '.png');
-	$('.right_computer_result_image').attr('src', 'images/' + computerChoice + '.png');
+	$('.js-result').html(result);
+	$('.js-player-img').attr('src', 'images/' + userChoice + '.png');
+	$('.js-comp-img').attr('src', 'images/' + computerChoice + '.png');
 
-	$('#modal').addClass('isActive');
+	$('.modal').addClass('isActive');
 
 	// update the scores
 	$('#humanScore').html(userScore);
@@ -91,7 +91,7 @@ function getWinner() {
 }
 
 
-// + Get random computer choice (using arrays). 
+// + Get random computer choice (using arrays).
 function getComputerChoice() {
 	var plays = ['rock', 'paper', 'scissors'];
  	var randNum = Math.floor(Math.random() * plays.length);
@@ -99,26 +99,27 @@ function getComputerChoice() {
  	return play;
 }
 
-$('.next_round_btn').on('click', initiateNextRound);
+$('.js-next').on('click', initiateNextRound);
 
 function initiateNextRound() {
 	currentRound++;
 	$('.round').removeClass('currentRound');
-	$('#modal').removeClass('isActive');
+	$('.modal').removeClass('isActive');
 
 	if (currentRound > 2) {
 		if (computerScore > userScore) {
-			alert ('The Computer Beat You...this time.');
+			alert('computer beat you');
 		} else if (userScore > computerScore) {
-			alert('You Beat the Computer!');
+			alert('you beat le computer');
 		} else {
-			alert("Y'all tied!");
+			alert("y'all tied up.")
 		}
 		currentRound = 0;
 	}
 
 	$('.round').eq(currentRound).addClass('currentRound');
 }
+
 
 // copied from slack:
 

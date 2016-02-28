@@ -74,22 +74,25 @@
     <div class="round">3</div>
   </div>
 
-  <div id="modal">
-    
-    <div class="modal_inner">
-      
-      <h1 class="modal_whoWon">WhoWon_Lorem</h1>
-      <img class="left_user_result_image" src="images/paper.png" alt="paper">
-      <img class="right_computer_result_image" src="images/rock.png" alt="rock">
-      <h2 class="left_user_result_copy">You</h2>
-      <h2 class="right_user_result_copy">Bot</h2>
-      <button class="next_round_btn" type="button">next round</button>
+  <div class="modal">
+    <div class="modal__inner">
+      <h2 class="js-result">You Won!</h2>
+      <div class="images">
+        <div class="image">
+          <img class="js-player-img" src="images/paper.png" alt="">
+          <span>You</span>
+        </div>
+        <div class="image">
+          <img class="js-comp-img" src="images/scissors.png" alt="">
+          <span>Bot</span>
+        </div>
+      </div>
+      <button type="button" class="js-next">Next Round</button>
     </div>
-
   </div>
 
 
-<div id="status"></div>
+  <div id="status"></div>
 
   <!-- main.js -->
     <script type="text/javascript" src="js/main.js"></script>
