@@ -57,7 +57,7 @@ function getWinner() {
 	} else if (userChoice === 'paper') {
 		if (computerChoice === 'rock') {
 			result = 'You Win';
-			userscore++;
+			userScore++;
 		} else if (computerChoice === 'paper') {
 			result = 'Tie';
 		} else if (computerChoice === 'scissors') {
