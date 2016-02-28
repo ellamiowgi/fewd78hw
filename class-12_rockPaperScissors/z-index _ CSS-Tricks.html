@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://css-tricks.com/almanac/properties/z/z-index/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width">
+
+	
+	<title>z-index | CSS-Tricks</title>
+
+	<link rel="apple-touch-icon" href="https://css-tricks.com/apple-touch-icon.png">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+	<link rel="search" type="application/opensearchdescription+xml" href="https://css-tricks.com/opensearch.xml" title="CSS-Tricks Search">
+
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.feedburner.com/CssTricks">
+
+	
+<!-- This site is optimized with the Yoast SEO plugin v3.0.7 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="div { z-index: 1; /* integer */ } The z-index property in CSS controls the vertical stacking order of elements that overlap. As in, which one appears as if">
+<meta name="robots" content="noodp">
+<link rel="canonical" href="https://css-tricks.com/almanac/properties/z/z-index/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="z-index | CSS-Tricks">
+<meta property="og:description" content="div { z-index: 1; /* integer */ } The z-index property in CSS controls the vertical stacking order of elements that overlap. As in, which one appears as if">
+<meta property="og:url" content="https://css-tricks.com/almanac/properties/z/z-index/">
+<meta property="og:site_name" content="CSS-Tricks">
+<meta property="article:publisher" content="https://www.facebook.com/CSSTricks">
+<meta property="og:image" content="https://cdn.css-tricks.com/wp-content/uploads/2011/09/basicz-index.png">
+<meta property="og:image" content="https://cdn.css-tricks.com/wp-content/uploads/2011/09/context.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="div { z-index: 1; /* integer */ } The z-index property in CSS controls the vertical stacking order of elements that overlap. As in, which one appears as if">
+<meta name="twitter:title" content="z-index | CSS-Tricks">
+<meta name="twitter:site" content="@Real_CSS_Tricks">
+<meta name="twitter:image" content="https://cdn.css-tricks.com/wp-content/uploads/2011/09/basicz-index.png">
+<meta name="twitter:creator" content="@sarassassin">
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="CSS-Tricks » z-index Comments Feed" href="https://css-tricks.com/almanac/properties/z/z-index/feed/">
+<script async="" src="./z-index _ CSS-Tricks_files/analytics.js"></script><script>var markdownify = {"ajax_url":"\/wp-admin\/admin-ajax.php","nonce":"1656c5f6d3"};</script><script type="text/javascript" src="./z-index _ CSS-Tricks_files/jquery-2.2.0.js"></script><style type="text/css"></style>
+<script type="text/javascript" src="./z-index _ CSS-Tricks_files/minqueue-0c113daa-148c2769.js"></script>
+<link rel="https://api.w.org/" href="https://css-tricks.com/wp-json/">
+<link rel="shortlink" href="https://css-tricks.com/?p=14142">
+<link rel="alternate" type="application/json+oembed" href="https://css-tricks.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcss-tricks.com%2Falmanac%2Fproperties%2Fz%2Fz-index%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://css-tricks.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcss-tricks.com%2Falmanac%2Fproperties%2Fz%2Fz-index%2F&amp;format=xml">
+<!-- Better Art Direction Styles -->
+
+
+<style type="text/css">img#wpstats{display:none}</style>
+  <!--[if !IE]><!-->
+  <link rel="stylesheet" href="./z-index _ CSS-Tricks_files/style.css">
+  <!--<![endif]-->
+  <!--[if lt IE 9]>
+  <link rel="stylesheet" href="https://cdn.css-tricks.com/wp-content/themes/CSS-Tricks-13/css/oldie.css">
+  <![endif]-->
+  <!--[if IE 9]>
+  <link rel="stylesheet" href="https://cdn.css-tricks.com/wp-content/themes/CSS-Tricks-13/style.css?v=11.3>
+  <![endif]-->
+
+				
+    
+  
+<script async="" src="./z-index _ CSS-Tricks_files/"></script><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed,.fluid-width-video-wrapper video {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+
+<body class="page page-id-14142 page-child parent-pageid-13961 page-template page-template-page-almanac-single page-template-page-almanac-single-php" data-pinterest-extension-installed="cr1.39.1" cz-shortcut-listen="true">
+
+    <script>
+  (function(){
+    var bsa = document.createElement('script');
+       bsa.async = true;
+       bsa.src = "//s3.buysellads.com/ac/bsa.js";
+    (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+  })();
+  </script>
+  
+  <header id="top" class="top">
+
+  <div class="top-bar">
+    <div class="header-inside">
+      <a href="https://css-tricks.com/" class="logo-link ready-to-animate">
+        <svg class="logomorph" xmlns="http://www.w3.org/2000/svg" viewBox="256 -49.2 700 199.2">
+  <g>
+    <path id="dash" d="M488.3 65.8h15.1c2.6 0 4.7-2.2 4.7-4.7 0-2.7-2.2-4.8-4.7-4.8h-15.1c-2.6 0-4.7 2.2-4.7 4.8-.1 2.5 2.1 4.7 4.7 4.7z"></path>
+    <path id="k" d="M703.4 81.1c0 2.7 2.2 4.9 5 4.9 2.7 0 4.9-2.2 4.9-4.9V69.4l9.2-8.9 18.1 23.1c1 1.4 2.3 2.3 4.2 2.3 2.8 0 5-2.1 5-4.8 0-1.5-.6-2.5-1.4-3.5l-19-23.6 17.5-16.9c1.1-1 1.8-2.2 1.8-3.7 0-2.4-1.8-4.6-4.6-4.6-1.8 0-3 .6-4.1 1.9l-26.7 26.9V33.8c0-2.7-2.2-4.9-4.9-4.9-2.8 0-5 2.2-5 4.9v47.3z"></path>
+    <path id="halfstar" class="st0" d="M733 64l-17.2-6.6 17.2-6.7c2.1-.9 4-2.6 4-5.3 0-3.1-2.6-5.7-5.7-5.7-1.6 0-2.8.5-4.3 1.7l-14.9 9.5 1.7-15.5c.5-3.6-1.9-6.4-5.3-6.4s-5.9 2.9-5.3 6.6v44c-.5 3.6 1.9 6.4 5.3 6.4 3.5 0 5.9-2.9 5.3-6.6L712.1 64l14.9 9.5c1.6 1 2.8 1.7 4.1 1.7 3.1 0 5.9-2.6 5.9-5.7 0-2.7-1.9-4.6-4-5.5z"></path>
+    <path id="s2" class="st0" d="M457.8 53c-10.9-2.6-13.4-4.5-13.4-8.9v-.2c0-3.7 3.4-6.7 9.2-6.7 4.4 0 8.6 1.4 13 4.3.8.5 1.6.7 2.6.7 2.6 0 4.7-2 4.7-4.6 0-1.9-1-3.3-2.2-3.9-5.1-3.4-10.8-5.2-17.9-5.2-11.2 0-19.2 6.7-19.2 16.3v.2c0 10.4 6.8 13.9 18.7 16.8 10.5 2.4 12.7 4.6 12.7 8.6v.2c0 4.2-3.9 7.1-10 7.1s-11.1-2.1-15.8-5.8c-.6-.5-1.5-.9-2.9-.9-2.6 0-4.7 2-4.7 4.6 0 1.6.8 3 1.9 3.8 6.3 4.7 13.5 7.1 21.2 7.1 11.8 0 20.1-6.3 20.1-16.8v-.2c0-9.4-6.1-13.6-18-16.5z"></path>
+    <path id="c1" class="st0" d="M371.1 70.9c-1.2 0-2.3.5-3 1.1-4.1 3.5-8.1 5.4-14.1 5.4-10.8 0-18.6-8.9-18.6-20v-.2c0-11 7.9-19.9 18.6-19.9 5.4 0 9.6 1.9 13.4 5.1.6.5 1.6 1 3 1 2.7 0 4.9-2.1 4.9-4.8 0-1.8-.9-3.1-1.9-3.9-4.9-3.8-10.6-6.4-19.3-6.4-17.1 0-29 13.1-29 29.1v.2c0 16.2 12.2 29 28.6 29 9.1 0 15.1-2.9 20.4-7.6.9-.8 1.6-2 1.6-3.5 0-2.5-2.1-4.6-4.6-4.6z"></path>
+    <path id="s1" class="st0" d="M407.9 53c-10.9-2.6-13.4-4.5-13.4-8.9v-.2c0-3.7 3.4-6.7 9.2-6.7 4.4 0 8.6 1.4 13 4.3.8.5 1.6.7 2.6.7 2.6 0 4.7-2 4.7-4.6 0-1.9-1-3.3-2.2-3.9-5.1-3.4-10.8-5.2-17.9-5.2-11.2 0-19.2 6.7-19.2 16.3v.2c0 10.4 6.8 13.9 18.7 16.8 10.5 2.4 12.7 4.6 12.7 8.6v.2c0 4.2-3.9 7.1-10 7.1s-11.1-2.1-15.8-5.8c-.6-.5-1.5-.9-2.9-.9-2.6 0-4.7 2-4.7 4.6 0 1.6.8 3 1.9 3.8 6.3 4.7 13.5 7.1 21.2 7.1 11.8 0 20.1-6.3 20.1-16.8v-.2c0-9.4-6.1-13.6-18-16.5z"></path>
+    <path id="t" class="st0" d="M549 29.3h-37.4c-2.6 0-4.6 2.1-4.6 4.6s2 4.6 4.6 4.6h13.7v42.6c0 2.7 2.3 4.9 5 4.9s5-2.2 5-4.9V38.5H549c2.5 0 4.5-2.1 4.5-4.6s-2-4.6-4.5-4.6z"></path>
+    <path id="c2" class="st0" d="M688.4 70.9c-1.2 0-2.3.5-3 1.1-4.1 3.5-8.1 5.4-14.1 5.4-10.8 0-18.6-8.9-18.6-20v-.2c0-11 7.9-19.9 18.6-19.9 5.4 0 9.6 1.9 13.4 5.1.6.5 1.6 1 3 1 2.7 0 4.9-2.1 4.9-4.8 0-1.8-.9-3.1-1.9-3.9-4.9-3.8-10.6-6.4-19.3-6.4-17.1 0-29 13.1-29 29.1v.2c0 16.2 12.2 29 28.6 29 9.1 0 15.1-2.9 20.4-7.6.9-.8 1.6-2 1.6-3.5 0-2.5-2.1-4.6-4.6-4.6z"></path>
+    <path id="r" class="st0" d="M587.9 29.3h-20.1c-2.8 0-5 2.2-5 5v46.8c0 2.7 2.2 4.9 5 4.9 2.7 0 4.9-2.2 4.9-4.9V66h12.5l13.7 17.5c1.1 1.5 2.6 2.6 4.8 2.6 2.4 0 4.7-1.9 4.7-4.6 0-1.5-.6-2.6-1.6-3.8L596 64.1c7.6-2.3 12.8-7.8 12.8-16.8v-.2c0-4.9-1.7-9.1-4.7-12.1-3.6-3.6-9.1-5.7-16.2-5.7zm10.8 18.5c0 5.7-4.5 9.4-11.6 9.4h-14.5V38.3H587c7.3 0 11.7 3.3 11.7 9.3v.2z"></path>
+    <path id="i" class="st0" d="M625.7 28.9c-2.8 0-5 2.2-5 4.9v47.3c0 2.7 2.2 4.9 5 4.9 2.7 0 4.9-2.2 4.9-4.9V33.8c0-2.7-2.2-4.9-4.9-4.9z"></path>
+    <path id="i2" class="st0" d="M625.7 28.9c-2.8 0-5 2.2-5 4.9v47.3c0 2.7 2.2 4.9 5 4.9 2.7 0 4.9-2.2 4.9-4.9V33.8c0-2.7-2.2-4.9-4.9-4.9z"></path>
+  </g>
+  <g id="newer">
+    <g id="saturn">
+      <g id="satbody">
+        <circle id="body" class="st1" cx="672.1" cy="57.7" r="28.9"></circle>
+        <path id="shadow" class="st2" d="M672.1 86.6c-24.2-3.9-33.6-29.9-21.8-47.9-4.4 5.1-7.1 11.7-7.1 19 0 15.9 13 28.9 28.9 28.9z" data-svg-origin="655.3000183105469 62.64999771118164" style="visibility: visible; transform-origin: 0px 0px 0px; opacity: 0; transform: matrix(0, 0, 0, 0, 655.3, 62.65);"></path>
+        <path id="highlight" class="st3" d="M672.1 28.8c-6.3 0-12.1 2-16.8 5.4 3.3-1.3 6.9-2 10.6-2 16 0 28.9 12.9 28.9 28.9 0 9.7-4.1 19.5-12.1 23.5 10.7-4.2 18.3-14.7 18.3-26.9 0-16-12.9-28.9-28.9-28.9z" data-svg-origin="678.1499938964844 56.69999885559082" style="visibility: visible; transform-origin: 0px 0px 0px; opacity: 0; transform: matrix(0, 0, 0, 0, 678.15, 56.7);"></path>
+      </g>
+      <g id="rings" style="visibility: visible;">
+        <path id="ringB" class="st4" d="M618 80.9c1.4 2.8 24.6-2.5 57-14.9 7.1-2.7 54.2-22.1 51.9-26.9-.8-1.6-9.8-.3-28.3 5.3.5 1.1.9 2.2 1 2.4 8.7-2.6 13.3-3.5 13.7-2.6 1 2.7-24.1 13.4-41.7 19.7-23.8 8.4-43.3 14.1-43.9 12.4-.4-1 5.7-4.3 16.5-9-.2-.5-.4-1.2-.6-2-3.3 1.5-27.2 12.4-25.6 15.6z" data-svg-origin="672.8000183105469 60.60000228881836" style="transform-origin: 0px 0px 0px; opacity: 0; transform: matrix(0, 0, 0, 0, 672.8, 60.6);"></path>
+        <path id="ringN" class="st5" d="M736.7 36.5c-1.2-3.3-16.6-.7-39.1 6.3.3.4.6 1.1.9 1.7l-.2-.5c10.3-3.1 31.4-9.3 32.9-6.2 2.8 5.6-50.1 26.5-56.1 28.8-6.8 2.6-57.8 21.2-60.5 15.7-1.9-3.8 24.8-15.8 28.7-17.6l.1.6c-.2-.7-.3-1.5-.4-2-21.2 9.4-34.7 17.7-33.5 20.9 1.7 4.5 31.5-2 66.6-15.2 35.2-13.2 62.3-28 60.6-32.5z" data-svg-origin="673.3500366210938 60.94999885559082" style="transform-origin: 0px 0px 0px; opacity: 0; transform: matrix(0, 0, 0, 0, 673.35, 60.95);"></path>
+      </g>
+    </g>
+    <g id="burst" style="visibility: visible; opacity: 0;">
+      <path id="l1" stroke-linecap="round" class="st6" d="M729.5 8.3v24.5" style="opacity: 1; stroke-width: 3px; transform: matrix(1, 0, 0, 1, -5, 0); stroke-dashoffset: -12.75px; stroke-dasharray: 1e-05px, 35.5px;" data-svg-origin="729.5 8.300000190734863"></path>
+      <path id="l2" stroke-linecap="round" class="st6" d="M727.5 34l27-15.7" data-svg-origin="727.5 18.299999237060547" style="opacity: 1; stroke-width: 3px; transform: matrix(1, 0, 0, 1, -5, 0); stroke-dashoffset: -16.1164px; stroke-dasharray: 1e-05px, 42.2328px;"></path>
+      <path id="l3" stroke-linecap="round" class="st6" d="M729 31.8l22.5 13.5" data-svg-origin="729 31.799999237060547" style="opacity: 1; stroke-width: 3px; transform: matrix(1, 0, 0, 1, -5, 0); stroke-dashoffset: -13.6196px; stroke-dasharray: 1e-05px, 37.2393px;"></path>
+      <path id="l4" stroke-linecap="round" class="st6" d="M729.5 31.3v26" data-svg-origin="729.5 31.299999237060547" style="opacity: 1; stroke-width: 3px; transform: matrix(1, 0, 0, 1, -5, 0); stroke-dashoffset: -13.5px; stroke-dasharray: 1e-05px, 37px;"></path>
+      <path id="l5" stroke-linecap="round" class="st6" d="M707.5 45.8l24.9-14.5" data-svg-origin="707.5 31.299999237060547" style="opacity: 1; stroke-width: 3px; transform: matrix(1, 0, 0, 1, -5, 0); stroke-dashoffset: -14.9071px; stroke-dasharray: 1e-05px, 39.8143px;"></path>
+      <path id="l6" stroke-linecap="round" class="st6" d="M702.5 16.3l30.2 18" data-svg-origin="702.5 16.299999237060547" style="opacity: 1; stroke-width: 3px; transform: matrix(1, 0, 0, 1, -5, 0); stroke-dashoffset: -18.0787px; stroke-dasharray: 1e-05px, 46.1574px;"></path>
+    </g>
+    <path id="star" d="M704.8 64l-12.9 9.5c-1.6 1-2.8 1.7-4.3 1.7-3.1 0-5.7-2.8-5.7-5.9 0-2.6 2.1-4.5 4-5.3l15.2-6.6-15.2-6.7c-2.1-.9-4-2.8-4-5.3 0-3.1 2.8-5.7 5.9-5.7 1.6 0 2.6.5 4.1 1.7l12.9 9.5-1.7-15.4c-.5-3.6 1.9-6.6 5.3-6.6 3.5 0 5.9 2.8 5.3 6.4L712 50.8l12.9-9.5c1.6-1.2 2.8-1.7 4.3-1.7 3.1 0 5.7 2.6 5.7 5.7 0 2.8-1.9 4.5-4 5.3l-15.2 6.7 15.2 6.6c2.1.9 4 2.8 4 5.5 0 3.1-2.8 5.7-5.9 5.7-1.4 0-2.6-.7-4.1-1.7L712 63.9l1.7 15.4c.5 3.6-1.9 6.6-5.3 6.6s-5.9-2.8-5.3-6.4l1.7-15.5z"></path>
+    <g id="zg">
+      <path id="lbracket" class="st7" d="M784.8 97.3l-26-12.7c-2.2-1-3.5-2.7-3.5-4.8v-.6c0-2.2 1.3-3.8 3.5-4.8l26-12.7c.7-.4 1.4-.6 2.2-.6 1.9-.1 3.5 1.6 3.5 3.7 0 1.7-.9 2.9-2.4 3.6l-23.7 11.1 23.7 11.2c1.5.7 2.4 2 2.4 3.7 0 2.2-1.7 3.7-3.8 3.7-.6-.2-1.3-.5-1.9-.8z"></path>
+      <path id="rbracket" class="st7" d="M773.8 15.6l25.9 12.7c2.2 1 3.5 2.7 3.5 4.8v.6c0 2.2-1.3 3.8-3.5 4.8l-25.9 12.7c-.7.4-1.4.6-2.2.6-1.9.1-3.5-1.6-3.5-3.7 0-1.7.9-2.9 2.4-3.5l23.7-11.2-23.7-11.2c-1.5-.7-2.4-2-2.4-3.7 0-2.2 1.7-3.7 3.8-3.7.6.2 1.3.5 1.9.8z"></path>
+      <path id="z1" d="M801 37.6c1.2-1.5 1.8-3 1.8-4.7v-.2c0-2.4-2.1-4.5-4.6-4.5H760c-2.4 0-4.5 2.1-4.5 4.6s2.1 4.5 4.5 4.5h29.1l-14.7 17.8 7.7 5.3L801 37.6z"></path>
+      <path id="z2" d="M798.5 77.2h-30.2l14-16.8-7.7-5.3-17.9 21.7c-1.2 1.4-1.9 3-1.9 4.7v.2c0 2.4 2.2 4.5 4.6 4.5h39.2c2.5 0 4.6-2 4.6-4.5s-2.2-4.5-4.7-4.5z"></path>
+    </g>
+    <g id="sg">
+      <path id="sl1" class="st0" d="M767.8 44.1v-.2c0-3.7 3.4-6.7 9.2-6.7 4.4 0 8.6 1.4 13 4.3.8.5 1.6.7 2.6.7 2.6 0 4.7-2 4.7-4.6 0-1.9-1-3.3-2.2-3.9-5.1-3.4-10.8-5.2-17.9-5.2-11.2 0-19.2 6.7-19.2 16.3v.2c0 10.1 6.5 13.7 17.9 16.6l4.8-8.7c-10.5-2.6-12.9-4.5-12.9-8.8z"></path>
+      <path id="sl2" class="st0" d="M781.2 53c-.2 0-.3-.1-.5-.1l-4.8 8.7c.3.1.6.1.8.2 10.5 2.4 12.7 4.6 12.7 8.6v.2c0 4.2-3.9 7.1-10 7.1s-11.1-2.1-15.8-5.8c-.6-.5-1.5-.9-2.9-.9-2.6 0-4.7 2-4.7 4.6 0 1.6.8 3 1.9 3.8 6.3 4.7 13.5 7.1 21.2 7.1 11.8 0 20.1-6.3 20.1-16.8v-.2c0-9.4-6.1-13.6-18-16.5z"></path>
+    </g>
+    <path id="kturn" d="M647.7 51.4c-2.7 0-4.9 2.2-4.9 5 0 2.7 2.2 4.9 4.9 4.9h11.7l8.9 9.2-23 18.2c-1.4 1-2.3 2.3-2.3 4.2 0 2.8 2.1 5 4.8 5 1.5 0 2.5-.6 3.5-1.4l23.5-19.1 16.9 17.5c1 1.1 2.2 1.8 3.7 1.8 2.4 0 4.6-1.8 4.6-4.6 0-1.8-.6-3-1.9-4.1l-27-26.6 23.8-.1c2.7 0 4.9-2.2 4.9-4.9 0-2.8-2.2-5-4.9-5h-47.2z"></path>
+    <path id="bracket" d="M687.5 68.8c-1.1 0-4-.1-5.2-.1-5.3 0-7.6 1.9-7.8 6.8-.1 2.2-1.5 3.6-3.5 3.6-1.9 0-3.3-1.4-3.5-3.6-.1-4.9-2.5-6.8-7.8-6.8-1.2 0-4.1.1-5.2.1-7.1 0-11.5-3-14-14.1-.5-2.2.9-4 3-4 1.7 0 2.7 1.2 3 2.1 2.2 6.9 4.4 7.9 9.3 7.9 1.4 0 3.8-.1 5.3-.1 5.6 0 8.4 2.7 9.9 7.5 1.6-4.8 4.2-7.5 9.9-7.5 1.5 0 3.9.1 5.3.1 4.9 0 7.1-1 9.3-7.9.3-.9 1.2-2.1 3-2.1 2.1 0 3.5 1.7 3 4-2.5 11.1-7 14.1-14 14.1z"></path>
+    <path id="repofill" class="st11" d="M551.4,36.7c0-3.9-3.1-7-7-7c-3.9,0-7,3.1-7,7c0,2.6,1.4,4.9,3.5,6.1v5.8l-10.6,11.7 l-10.6-11.7v-5.8c2.1-1.2,3.5-3.5,3.5-6.1c0-3.9-3.1-7-7-7s-7,3.1-7,7c0,2.6,1.4,4.9,3.5,6.1v8.6l14.1,15.5v6 c-2.1,1.2-3.5,3.5-3.5,6.1c0,3.9,3.1,7,7,7c3.9,0,7-3.1,7-7c0-2.6-1.4-4.9-3.5-6.1v-6l14.1-15.5v-8.6 C550,41.6,551.4,39.4,551.4,36.7z"></path>
+    <path id="repodot3" class="st12" d="M544.7,32.9c1.9,0,3.5,1.6,3.5,3.5c0,1.9-1.6,3.5-3.5,3.5s-3.5-1.6-3.5-3.5 C541.2,34.5,542.8,32.9,544.7,32.9z" data-svg-origin="544.7000122070312 36.400001525878906" style="visibility: visible; transform-origin: 0px 0px 0px; transform: matrix(0, 0, 0, 0, 544.7, 36.4);"></path>
+    <path id="repodot2" class="st12" d="M516.2,33.1c1.9,0,3.5,1.6,3.5,3.5c0,1.9-1.6,3.5-3.5,3.5c-1.9,0-3.5-1.6-3.5-3.5 C512.7,34.7,514.3,33.1,516.2,33.1z" data-svg-origin="516.2000122070312 36.599998474121094" style="visibility: visible; transform-origin: 0px 0px 0px; transform: matrix(0, 0, 0, 0, 516.2, 36.6);"></path>
+    <path id="repodot1" class="st12" d="M530.3,75.7c1.9,0,3.5,1.6,3.5,3.5s-1.6,3.5-3.5,3.5c-1.9,0-3.5-1.6-3.5-3.5 S528.4,75.7,530.3,75.7z" data-svg-origin="530.2999877929688 79.19999694824219" style="visibility: visible; transform-origin: 0px 0px 0px; transform: matrix(0, 0, 0, 0, 530.3, 79.2);"></path>
+    <path id="slash" class="st7" d="M807.1 80.3l41-50.2c.9-1.1 2.2-1.6 3.7-1.3 2 .3 3.4 1.9 3.1 3.5-.1.6-.4 1.1-.7 1.5L813.3 84c-.9 1.1-2.1 1.6-3.6 1.3-2-.3-3.5-1.9-3.2-3.5 0-.6.3-1.2.6-1.5z" data-svg-origin="830.7000122070312 57.05000114440918" style="visibility: visible; transform-origin: 0px 0px 0px; transform: matrix(0, 0, 0, 0, 830.7, 57.05);"></path>
+    <path id="link" class="st0" d="M405.6 73.7c-1.4 1.1-1.6 3.2-.5 4.6l2.4 3c2.1 2.7 5.2 4.2 8.4 4.6 3.2.4 6.5-.5 9.2-2.6 2.6-2.1 4.3-5 4.6-8.3.4-3.3-.6-6.6-2.7-9.2L418.3 55c-5.4-6.7-12.3-8.4-17.6-4.2-1.4 1.1-1.7 3.2-.5 4.6 1.1 1.4 3.2 1.7 4.6.5 3.1-2.4 6.6 1 8.4 3.2l8.7 10.8c1 1.2 1.4 2.8 1.2 4.3-.2 1.6-1 3-2.2 3.9-2.6 2-6.3 1.6-8.4-.9l-2.4-3c-1.1-1.4-3.1-1.6-4.5-.5zm-25.5-32.3c-.4 3.3.6 6.6 2.7 9.2l9.3 11.6c2.9 3.6 6.1 5.6 9.3 5.9 2.6.3 5.3-.5 7.7-2.4 1.4-1.1 1.7-3.2.5-4.6-1.1-1.4-3.2-1.7-4.6-.5-1.1.8-3.6 2.8-7.8-2.5l-9.3-11.6c-1-1.2-1.4-2.8-1.3-4.3.2-1.6 1-2.9 2.2-3.9 2.3-1.8 5.6-2.5 7.8.2l3 3.7c1.1 1.4 3.2 1.6 4.6.5 1.4-1.1 1.6-3.2.5-4.6l-2.9-3.7c-4.2-5.2-11.3-5.7-17-1.3-2.7 2-4.3 5-4.7 8.3z"></path>
+  </g>
+  <circle id="dotExpand" fill="#E18728" cx="503" cy="61" r="3.9" data-svg-origin="499.1000061035156 57.099998474121094" style="opacity: 1;"></circle>
+  <circle id="dotActivate" fill="#E18728" cx="503" cy="61" r="3.9"></circle>
+</svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="second-bar" id="second-bar">
+
+    <div class="header-inside">
+
+      <section class="search" role="search">
+
+        <form id="search-form" action="https://css-tricks.com/search-results/">
+
+          <div class="flexy-search">
+            <label for="q" id="search-label">
+              <span class="screen-reader">Search</span>
+              <svg viewBox="0 0 100 100" class="shape-search">
+                <use xlink:href="#shape-search"></use>
+              </svg>
+            </label>
+            <!-- type="text" here because of bug with youtube embeds UGHSKDGHK. -->
+            <input aria-labelledby="search-label" id="q" required="" type="text" name="q" class="search-field" value="">
+          </div>
+
+          <div>
+            <input type="submit" value="Search" class="screen-reader">
+          </div>
+
+        </form>
+
+      </section>
+
+      
+<nav class="main-nav" id="main-nav">
+
+  <ul>
+
+    <li>
+      <a href="https://css-tricks.com/" class="home">
+        Blog
+      </a>
+    </li>
+    <li>
+      <a href="https://css-tricks.com/video-screencasts/" class="videos">
+        Videos
+      </a>
+    </li>
+    <li>
+      <a href="https://css-tricks.com/almanac/" class="almanac">
+        Almanac
+      </a>
+    </li>
+    <li>
+      <a href="https://css-tricks.com/snippets/" class="snippets">
+        Snippets
+      </a>
+    </li>
+    <li>
+      <a href="https://css-tricks.com/forums/" class="forums has-dropdown">
+        Forums
+      </a>
+      <ul>
+                <li>
+          <a href="https://css-tricks.com/forums/all-topics/">All Topics</a>
+        </li>
+              </ul>
+    </li>
+    <li>
+      <a href="https://css-tricks.com/shop/" class="shop has-dropdown">
+        Shop
+      </a>
+      <ul>
+        <li>
+          <a href="https://css-tricks.com/cart/">Cart / Checkout</a>
+        </li>
+              </ul>
+    </li>
+    <li>
+      <a href="https://css-tricks.com/lodge/" class="lodge has-dropdown">
+        Lodge
+      </a>
+      <ul>
+        <li>
+          <a href="https://css-tricks.com/lodge/">Lodge Home</a>
+        </li>
+                  <li>
+            <a href="https://css-tricks.com/lodge/signup/">Sign Up</a>
+          </li>
+              </ul>
+    </li>
+
+  </ul>
+
+</nav>
+
+    </div>
+
+  </div>
+
+</header>
+
+  <div class="page-wrap">
+
+    <div class="content-wrap">
+
+<div class="mega-header breadcrumbs-header" id="almanac-snippets-header">
+  <span><span xmlns:v="http://rdf.data-vocabulary.org/#"><span rel="v:child" typeof="v:Breadcrumb"><a href="https://css-tricks.com/almanac/" rel="v:url" property="v:title">CSS Almanac</a> » <span rel="v:child" typeof="v:Breadcrumb"><a href="https://css-tricks.com/almanac/properties/" rel="v:url" property="v:title">Properties</a> » <span rel="v:child" typeof="v:Breadcrumb"><a href="https://css-tricks.com/almanac/properties/z/" rel="v:url" property="v:title">Z</a> » <strong class="breadcrumb_last">z-index</strong></span></span></span></span></span></div>
+
+<div class="grid group">
+
+  <section class="almanac-posts grid-2-3">
+
+    <article id="post-14142">
+
+      <h1 class="screen-reader">z-index</h1>
+
+      <div class="meta">
+        <div class="meta-author">
+          By:
+          <a href="https://css-tricks.com/author/saracope/">
+            <span class="p-author">
+              Sara Cope            </span>
+          </a>
+        </div>
+        <div class="meta-last-updated">
+          Last updated on:
+          <time datetime="2015-01-22">January 22, 2015</time>
+        </div>
+      </div>
+
+      <pre rel="CSS" class=" language-css"><code class=" language-css"><span class="token selector">div </span><span class="token punctuation">{</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* integer */</span>
+<span class="token punctuation">}</span></code></pre>
+<p>The <code>z-index</code> property in CSS controls the vertical stacking order of elements that overlap. As in, which one appears as if it is physically closer to you. <code>z-index</code> only effects elements that have a <a href="http://css-tricks.com/almanac/properties/p/position/">position</a> value other than <code>static</code> (the default). </p>
+<p>Elements can overlap for a variety of reasons, for instance relative positioning has nudged it over something else. Negative <a href="http://css-tricks.com/almanac/properties/m/margin/">margin</a> has pulled the element over another. Absolutely positioned elements overlap each other. All sorts of reasons.</p>
+<figure><img src="./z-index _ CSS-Tricks_files/basicz-index.png" alt="" title="basicz-index" width="425" height="235" class="alignnone size-full wp-image-16548"></figure>
+<p>Without any <code>z-index</code> value, elements stack in the order that they appear in the DOM (the lowest one down at the same hierarchy level appears on top). Elements with non-static positioning will always appear on top of elements with default static positioning.</p>
+<p>Also note that nesting plays a big role. If an element B sits on top of element A, a child element of element A can <strong>never</strong> be higher than element B. </p>
+<figure><img src="./z-index _ CSS-Tricks_files/context.png" alt="" title="context" width="530" height="342" class="alignnone size-full wp-image-16549" srcset="https://cdn.css-tricks.com/wp-content/uploads/2011/09/context-300x193.png 300w, https://css-tricks.com/wp-content/uploads/2011/09/context.png 530w" sizes="(max-width: 530px) 100vw, 530px"></figure>
+<p>Note that older version of IE get this context stuff a bit screwed up. Here's <a href="http://css-tricks.com/snippets/jquery/fixing-ie-z-index/">a jQuery fix for that</a>. </p>
+<h3 id="more-information">More Information</h3>
+<ul>
+<li>Screencast: <a href="http://css-tricks.com/video-screencasts/40-how-z-index-works/">How z-index Works</a></li>
+<li><a href="https://developer.mozilla.org/en/CSS/z-index">MDN Docs</a></li>
+<li>Comprehensive article: <a href="https://developer.mozilla.org/en/Understanding_CSS_z-index">Understanding z-index</a></li>
+<li><a href="http://css-tricks.com/rational-z-index-values/">Rational z-index Values</a></li>
+</ul>
+<h3 id="browser-support">Browser Support</h3>
+<table class="browser-support-table">
+<thead>
+<tr>
+<th class="chrome"><span>Chrome</span></th>
+<th class="safari"><span>Safari</span></th>
+<th class="firefox"><span>Firefox</span></th>
+<th class="opera"><span>Opera</span></th>
+<th class="ie"><span>IE</span></th>
+<th class="android"><span>Android</span></th>
+<th class="iOS"><span>iOS</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="yep" data-browser-name="Chrome">Works</td>
+<td class="yep" data-browser-name="Safari">Works</td>
+<td class="yep" data-browser-name="Firefox">Works</td>
+<td class="yep" data-browser-name="Opera">Works</td>
+<td class="yep" data-browser-name="IE">4+</td>
+<td class="yep" data-browser-name="Android">4+</td>
+<td class="yep" data-browser-name="iOS">Works</td>
+</tr>
+</tbody>
+</table>
+
+    </article>
+
+          <div class="bsap-doubles">
+        <div id="bsap_1250418" class="bsarocks bsap_3469a2a501a9e18091036aa0c89f9dcb"></div>
+      </div>
+    
+    <section id="comments">
+
+
+
+  <h1 class="h2 comments-title">
+    Comments
+  </h1>
+
+  <ol class="commentlist group">
+    
+    <li class="comment even thread-even depth-1" id="li-comment-166855">
+
+      <div class="grid group comment-wrap" id="comment-166855">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/b08bd62d1eba21d1b21586042951468d" srcset="https://secure.gravatar.com/avatar/b08bd62d1eba21d1b21586042951468d?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Mr Z</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-166855"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2012-04-23T13:57:07+00:00">April 23, 2012</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>“Also note that nesting plays a big role. If an element B sits on top of element A, a child element of element A can never be higher than element B.”</p>
+<p>That’s not quite right. In your illustration, “not child” will only be on top if the green box starts a stacking context, for which it needs z-index of anything except auto (or opacity of anything except 1.0). Just being position: relative doesn’t start a stacking context.</p>
+<p>The main point about stacking contexts is that z-index can be used to rearrange the stacking order of elements <em>only inside their own stacking context</em>. That entire stacking context has a stacking position within <em>its</em> stacking context that’s determined by <em>its</em> z-index property and those of its siblings in that parent stacking context. Elements from different stacking contexts are therefore never interleaved in the final stacking order (this is what the spec means when it says stacking contexts are “atomic”).</p>
+<p>If you think in terms of the “painters algorithm”, where objects are painted onto a scene back-to-front, then a stacking context is like a painting within a painting. You first paint everything in the stacking context back-to-front in the proper order, then slap the whole result in whereever it belongs when you come to paint its parent context.</p>
+<p>With no z-index, things do stack pretty much in DOM order but with positioned stuff above, but it’s also worth mentioning that floats are also brought in front of non-floats (but behind the positioned boxes).</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=166855#respond" onclick="return addComment.moveForm( &quot;comment-166855&quot;, &quot;166855&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to Mr Z">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  <ul class="children">
+
+    <li class="comment odd alt depth-2" id="li-comment-621281">
+
+      <div class="grid group comment-wrap" id="comment-621281">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/ec24371e00d2f6820348f2cfd5f91351" srcset="https://secure.gravatar.com/avatar/ec24371e00d2f6820348f2cfd5f91351?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Vishal</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-621281"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-10-31T04:36:09+00:00">October 31, 2013</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>Thank you for the comment. Was really helpful.</p>
+
+            <div class="reply">
+                          </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-198393">
+
+      <div class="grid group comment-wrap" id="comment-198393">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/c2cc502a7d55c46aac0f615c6db0325b" srcset="https://secure.gravatar.com/avatar/c2cc502a7d55c46aac0f615c6db0325b?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Toby</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-198393"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2012-10-18T05:16:16+00:00">October 18, 2012</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>This had me caught out for a while earlier, so I thought I’d post a note here – don’t forget that z-index still respects parent’s overflow. So if you still can’t see something despite a z-index in the millions, check it’s not being cropped by an overflow:hidden</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=198393#respond" onclick="return addComment.moveForm( &quot;comment-198393&quot;, &quot;198393&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to Toby">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  <ul class="children">
+
+    <li class="comment odd alt depth-2" id="li-comment-292762">
+
+      <div class="grid group comment-wrap" id="comment-292762">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/7c1741e1f63c9a3c85a488222579be81" srcset="https://secure.gravatar.com/avatar/7c1741e1f63c9a3c85a488222579be81?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Matt</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-292762"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-02-27T13:50:26+00:00">February 27, 2013</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>I was fighting with this for an hour until I read this comment! Thanks!</p>
+
+            <div class="reply">
+                          </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even depth-2" id="li-comment-300284">
+
+      <div class="grid group comment-wrap" id="comment-300284">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/35e4ecad191edaaf871b8f9338dc5ac0" srcset="https://secure.gravatar.com/avatar/35e4ecad191edaaf871b8f9338dc5ac0?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Aashish</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-300284"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-03-10T13:37:12+00:00">March 10, 2013</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>Yeah I was also struggling with the same issue of parent’s overflow being hidden and your comment saved me! Thank you!</p>
+
+            <div class="reply">
+                          </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt depth-2" id="li-comment-498497">
+
+      <div class="grid group comment-wrap" id="comment-498497">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/d23792babb12e3bb7ad66e2918e1ea4e" srcset="https://secure.gravatar.com/avatar/d23792babb12e3bb7ad66e2918e1ea4e?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">A. Cabreira</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-498497"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-07-30T20:32:27+00:00">July 30, 2013</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>Brilliant, solved me a days headache , thanks!</p>
+
+            <div class="reply">
+                          </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even depth-2" id="li-comment-515347">
+
+      <div class="grid group comment-wrap" id="comment-515347">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/641f0dd35b71cb90f74498e553eb0dcb" srcset="https://secure.gravatar.com/avatar/641f0dd35b71cb90f74498e553eb0dcb?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">aj</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-515347"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-08-15T00:28:20+00:00">August 15, 2013</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>thank you thank you thank you!!</p>
+
+            <div class="reply">
+                          </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt depth-2" id="li-comment-1594359">
+
+      <div class="grid group comment-wrap" id="comment-1594359">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/7dcf73e3eb93406a7db16b7184115ae7" srcset="https://secure.gravatar.com/avatar/7dcf73e3eb93406a7db16b7184115ae7?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Victor</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1594359"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-05-09T18:39:08+00:00">May 9, 2015</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>@Toby thanks for the tip. It worked!</p>
+
+            <div class="reply">
+                          </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even depth-2" id="li-comment-1598710">
+
+      <div class="grid group comment-wrap" id="comment-1598710">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/b1de3a4b37c173d464ba39d0b0f610e6" srcset="https://secure.gravatar.com/avatar/b1de3a4b37c173d464ba39d0b0f610e6?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">yes</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1598710"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-12-23T05:36:49+00:00">December 23, 2015</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>It helped me a lot. Thank you!</p>
+
+            <div class="reply">
+                          </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-268152">
+
+      <div class="grid group comment-wrap" id="comment-268152">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/da633d82223087ec04f700d642353598" srcset="https://secure.gravatar.com/avatar/da633d82223087ec04f700d642353598?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Helen</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-268152"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-01-24T08:32:42+00:00">January 24, 2013</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>Thanks, I’ve been fighting with z-index again today. For the first time I think I might be winning!</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=268152#respond" onclick="return addComment.moveForm( &quot;comment-268152&quot;, &quot;268152&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to Helen">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-279512">
+
+      <div class="grid group comment-wrap" id="comment-279512">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/7e82b490cab62182c5c09629299a2f91" srcset="https://secure.gravatar.com/avatar/7e82b490cab62182c5c09629299a2f91?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Stupothead</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-279512"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-02-08T02:38:14+00:00">February 8, 2013</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>Hi, I have come across a issue where negative Z-Index does not work on IOS ipad 4. Its real bummer as it used to send a fullscreen BG to the back of my template which is useful as I dont have to assign Z-Index to all the other elements. Does any one know a suitable solution, maybe iOS as some of its own special commands which is the trend these days.? Cheers.</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=279512#respond" onclick="return addComment.moveForm( &quot;comment-279512&quot;, &quot;279512&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to Stupothead">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-473381">
+
+      <div class="grid group comment-wrap" id="comment-473381">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/80b6a5453cb3fe97457d1049a23f701e" srcset="https://secure.gravatar.com/avatar/80b6a5453cb3fe97457d1049a23f701e?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Abhinav</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-473381"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-06-27T23:49:59+00:00">June 27, 2013</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>@Toby: Thanks mate :) Little things :)</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=473381#respond" onclick="return addComment.moveForm( &quot;comment-473381&quot;, &quot;473381&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to Abhinav">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-480695">
+
+      <div class="grid group comment-wrap" id="comment-480695">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/1de144ed91261d34b7686215c8c879a2" srcset="https://secure.gravatar.com/avatar/1de144ed91261d34b7686215c8c879a2?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Tahmid</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-480695"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-07-08T02:39:42+00:00">July 8, 2013</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>Z-index is new to me. Still I am not so clear about it. Can you please help me by giving some examples. Does it work in iOS also?</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=480695#respond" onclick="return addComment.moveForm( &quot;comment-480695&quot;, &quot;480695&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to Tahmid">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  <ul class="children">
+
+    <li class="comment odd alt depth-2" id="li-comment-1595559">
+
+      <div class="grid group comment-wrap" id="comment-1595559">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/c36345a3220c0a4c2a29cde2d0051e5a" srcset="https://secure.gravatar.com/avatar/c36345a3220c0a4c2a29cde2d0051e5a?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">arush</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1595559"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-06-30T04:00:47+00:00">June 30, 2015</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>img {<br>
+    position: absolute;<br>
+    left: 0px;<br>
+    top: 0px;<br>
+    z-index: -1;<br>
+}</p>
+<p>This is a heading</p>
+<p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+
+            <div class="reply">
+                          </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment even thread-even depth-1" id="li-comment-506252">
+
+      <div class="grid group comment-wrap" id="comment-506252">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/c34696c526e6059f2d90d91bd65f955a" srcset="https://secure.gravatar.com/avatar/c34696c526e6059f2d90d91bd65f955a?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">akshay</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-506252"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-08-06T11:54:20+00:00">August 6, 2013</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>Z-index is one of the most important css property of element, when overlaying one component over other. Thanks. Nice information</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=506252#respond" onclick="return addComment.moveForm( &quot;comment-506252&quot;, &quot;506252&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to akshay">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-515061">
+
+      <div class="grid group comment-wrap" id="comment-515061">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/f2ee7dc10da77e3112d9ef845264b4a5" srcset="https://secure.gravatar.com/avatar/f2ee7dc10da77e3112d9ef845264b4a5?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Rex</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-515061"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-08-14T16:16:16+00:00">August 14, 2013</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>thanks for your life saving teachings! you have rescued me from being drowned!</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=515061#respond" onclick="return addComment.moveForm( &quot;comment-515061&quot;, &quot;515061&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to Rex">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-even depth-1" id="li-comment-567716">
+
+      <div class="grid group comment-wrap" id="comment-567716">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/924b3378140208635c4965a7e8b59778" srcset="https://secure.gravatar.com/avatar/924b3378140208635c4965a7e8b59778?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">braders</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-567716"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-09-30T08:51:15+00:00">September 30, 2013</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>I spent an hour trying to figure this out, and the information was here. Your amazing</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=567716#respond" onclick="return addComment.moveForm( &quot;comment-567716&quot;, &quot;567716&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to braders">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-619231">
+
+      <div class="grid group comment-wrap" id="comment-619231">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/a3e8dba0066a344aed8b7540d7472937" srcset="https://secure.gravatar.com/avatar/a3e8dba0066a344aed8b7540d7472937?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Salman</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-619231"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2013-10-30T03:40:42+00:00">October 30, 2013</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>thanks. your comment saved me from googling</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=619231#respond" onclick="return addComment.moveForm( &quot;comment-619231&quot;, &quot;619231&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to Salman">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-even depth-1 buried" id="li-comment-1322664">
+
+      <div class="grid group comment-wrap" id="comment-1322664">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/05b806b0c8758525fcfabe83904d121d" srcset="https://secure.gravatar.com/avatar/05b806b0c8758525fcfabe83904d121d?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Vaibhav</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1322664"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-03-12T12:56:13+00:00">March 12, 2014</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>Thanks for the info!! really helpful!!</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=1322664#respond" onclick="return addComment.moveForm( &quot;comment-1322664&quot;, &quot;1322664&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to Vaibhav">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1581283">
+
+      <div class="grid group comment-wrap" id="comment-1581283">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/4247809c8f643d1a5164fde1e0a00466" srcset="https://secure.gravatar.com/avatar/4247809c8f643d1a5164fde1e0a00466?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">sk</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1581283"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-05-16T05:43:11+00:00">May 16, 2014</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <pre><code>#border {
+    width:250px;
+    height:350px;
+    background:url('border.png') no-repeat;
+    margin:auto;
+    position:relative;
+}
+.picture {
+    position:relative;
+    z-index:100;
+ }
+</code></pre>
+<p>Not Working</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=1581283#respond" onclick="return addComment.moveForm( &quot;comment-1581283&quot;, &quot;1581283&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to sk">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  <ul class="children">
+
+    <li class="comment even depth-2" id="li-comment-1584736">
+
+      <div class="grid group comment-wrap" id="comment-1584736">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/f9b36b3199b887f07f018a7e28da567e" srcset="https://secure.gravatar.com/avatar/f9b36b3199b887f07f018a7e28da567e?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">md</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1584736"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-08-26T07:47:31+00:00">August 26, 2014</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>its working to me !!</p>
+
+            <div class="reply">
+                          </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-1583562">
+
+      <div class="grid group comment-wrap" id="comment-1583562">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/3536cfbcb5753045c79ae40d6c9e8b02" srcset="https://secure.gravatar.com/avatar/3536cfbcb5753045c79ae40d6c9e8b02?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">ktian</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1583562"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-07-08T19:27:27+00:00">July 8, 2014</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>cool responsive website :D<br>
+keep it up</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=1583562#respond" onclick="return addComment.moveForm( &quot;comment-1583562&quot;, &quot;1583562&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to ktian">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-1586413">
+
+      <div class="grid group comment-wrap" id="comment-1586413">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/41d9f49bc6c1b3baa26fcdcaae33ed49" srcset="https://secure.gravatar.com/avatar/41d9f49bc6c1b3baa26fcdcaae33ed49?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Internet Marketing</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1586413"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-11-04T00:27:11+00:00">November 4, 2014</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>So this is good knowledge, but it would make this article really useful if you showed how to get the “CHILD” to stack above the  “NOT CHILD”, while still remaining a child of the green element.</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=1586413#respond" onclick="return addComment.moveForm( &quot;comment-1586413&quot;, &quot;1586413&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to Internet Marketing">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1 buried" id="li-comment-1586476">
+
+      <div class="grid group comment-wrap" id="comment-1586476">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/f2cdf4e5fdd8622a1d1e3f49be05191e" srcset="https://secure.gravatar.com/avatar/f2cdf4e5fdd8622a1d1e3f49be05191e?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Nazmul Hasan</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1586476"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-11-06T02:42:21+00:00">November 6, 2014</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>Nice article boss…</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=1586476#respond" onclick="return addComment.moveForm( &quot;comment-1586476&quot;, &quot;1586476&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to Nazmul Hasan">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-1587749">
+
+      <div class="grid group comment-wrap" id="comment-1587749">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/2bf164461fc55ae90ebd52c228bf7091" srcset="https://secure.gravatar.com/avatar/2bf164461fc55ae90ebd52c228bf7091?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Atul</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1587749"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2014-12-23T21:51:50+00:00">December 23, 2014</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>Hi all</p>
+<p>Please let know is it good to give z-index:1000 and above ?</p>
+<p>Atul Bhalerao</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=1587749#respond" onclick="return addComment.moveForm( &quot;comment-1587749&quot;, &quot;1587749&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to Atul">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  <ul class="children">
+
+    <li class="comment byuser comment-author-chriscoyier odd alt depth-2" id="li-comment-1592065">
+
+      <div class="grid group comment-wrap" id="comment-1592065">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/e6e3b0dc1a26476da301047fb70784e5" srcset="https://secure.gravatar.com/avatar/e6e3b0dc1a26476da301047fb70784e5?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Chris Coyier</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1592065"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-01-22T08:23:27+00:00">January 22, 2015</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>I wrote a bit about that here: <a href="http://css-tricks.com/rational-z-index-values/" rel="nofollow">http://css-tricks.com/rational-z-index-values/</a></p>
+
+            <div class="reply">
+                          </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment even thread-even depth-1" id="li-comment-1592218">
+
+      <div class="grid group comment-wrap" id="comment-1592218">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/02db91fba8e7f7b287c63b78ffbf647c" srcset="https://secure.gravatar.com/avatar/02db91fba8e7f7b287c63b78ffbf647c?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Joseph OLeary</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1592218"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-01-28T20:18:53+00:00">January 28, 2015</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>Was using this technique and got hung up by an overflow: hidden; being applied by bootstrap.</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=1592218#respond" onclick="return addComment.moveForm( &quot;comment-1592218&quot;, &quot;1592218&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to Joseph OLeary">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1592737">
+
+      <div class="grid group comment-wrap" id="comment-1592737">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/0de7132c00c7d528d593aa957e9ec18c" srcset="https://secure.gravatar.com/avatar/0de7132c00c7d528d593aa957e9ec18c?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">srikanth</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1592737"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-02-24T08:10:31+00:00">February 24, 2015</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>superb visual examples, i tried its working “z-index:2;”</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=1592737#respond" onclick="return addComment.moveForm( &quot;comment-1592737&quot;, &quot;1592737&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to srikanth">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-even depth-1 buried" id="li-comment-1593939">
+
+      <div class="grid group comment-wrap" id="comment-1593939">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/26a1828e86f9ca382844a4761749848c" srcset="https://secure.gravatar.com/avatar/26a1828e86f9ca382844a4761749848c?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Shah</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1593939"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-04-17T23:16:07+00:00">April 17, 2015</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>Thanks a lot. After struggling for 12 hours I finally solved it with your help.</p>
+<p>Thanks A lot….</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=1593939#respond" onclick="return addComment.moveForm( &quot;comment-1593939&quot;, &quot;1593939&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to Shah">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment byuser comment-author-dago odd alt thread-odd thread-alt depth-1" id="li-comment-1594122">
+
+      <div class="grid group comment-wrap" id="comment-1594122">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/976e52b11ec8ae14d08debc051f82594" srcset="https://secure.gravatar.com/avatar/976e52b11ec8ae14d08debc051f82594?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">dago</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1594122"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-04-28T02:30:05+00:00">April 28, 2015</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>Hi Cris! Here one more interesting thing how OPACITY can change positioning.  <a href="http://codepen.io/dagolinuxoid/pen/GJgBaK" rel="nofollow">http://codepen.io/dagolinuxoid/pen/GJgBaK</a></p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=1594122#respond" onclick="return addComment.moveForm( &quot;comment-1594122&quot;, &quot;1594122&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to dago">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  <ul class="children">
+
+    <li class="comment even depth-2" id="li-comment-1595560">
+
+      <div class="grid group comment-wrap" id="comment-1595560">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/976e52b11ec8ae14d08debc051f82594" srcset="https://secure.gravatar.com/avatar/976e52b11ec8ae14d08debc051f82594?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">daGo</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1595560"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-06-30T04:06:25+00:00">June 30, 2015</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>I wrote Chris without “h” – can’t believe it)) … sorry.</p>
+
+            <div class="reply">
+                          </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-1594281">
+
+      <div class="grid group comment-wrap" id="comment-1594281">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/d9c4d1b0835667fd0f7f94fdbda669cd" srcset="https://secure.gravatar.com/avatar/d9c4d1b0835667fd0f7f94fdbda669cd?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Alka Jain</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1594281"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-05-05T12:01:55+00:00">May 5, 2015</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>I have a site – <a href="http://www.couponcandy.in/" rel="nofollow">http://www.couponcandy.in/</a> where my menu has a category which is going under my adsense ad while i mouse hover on it. any help would be great</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=1594281#respond" onclick="return addComment.moveForm( &quot;comment-1594281&quot;, &quot;1594281&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to Alka Jain">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment even thread-odd thread-alt depth-1" id="li-comment-1596927">
+
+      <div class="grid group comment-wrap" id="comment-1596927">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/27f04fd07488e1093b8e7771f4ee6452" srcset="https://secure.gravatar.com/avatar/27f04fd07488e1093b8e7771f4ee6452?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">Shemaya</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1596927"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-09-13T02:32:29+00:00">September 13, 2015</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>Thank you! was realy helpfull</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=1596927#respond" onclick="return addComment.moveForm( &quot;comment-1596927&quot;, &quot;1596927&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to Shemaya">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+
+    <li class="comment odd alt thread-even depth-1" id="li-comment-1598569">
+
+      <div class="grid group comment-wrap" id="comment-1598569">
+
+        <div class="comment-avatar grid-1-5">
+          <img alt="" src="./z-index _ CSS-Tricks_files/ab01b630595b53d435378e83681f0bcd" srcset="https://secure.gravatar.com/avatar/ab01b630595b53d435378e83681f0bcd?s=320&amp;d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&amp;r=pg 2x" class="avatar avatar-160 photo" height="160" width="160">        </div>
+
+        <div class="comment-body group grid-4-5">
+
+          <div class="comment-author-wrap vcard">
+            <div class="comment-author">kenneth</div> <div class="comment-time"><a href="https://css-tricks.com/almanac/properties/z/z-index/#comment-1598569"><span class="screen-reader">Permalink to comment</span>#</a> <time datetime="2015-12-14T18:58:10+00:00">December 14, 2015</time></div>
+            
+          </div>
+          
+          <div class="comment-content">
+
+            <p>Thanks! finally my problem solve … :D</p>
+
+            <div class="reply">
+              <a rel="nofollow" class="comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/?replytocom=1598569#respond" onclick="return addComment.moveForm( &quot;comment-1598569&quot;, &quot;1598569&quot;, &quot;respond&quot;, &quot;14142&quot; )" aria-label="Reply to kenneth">Reply ↓</a>            </div><!-- .reply -->
+
+          </div>
+        </div>
+      </div>
+    
+  </li><!-- #comment-## -->
+  </ol>
+
+
+
+  <div id="respond" class="respond group">
+
+    
+    <form action="https://css-tricks.com/wp-comments-post.php" method="post" id="comment-form" class="group comment-form">
+
+      <h2 class="comments-title">
+        Leave a Comment
+      </h2>
+
+      
+        <div class="grid nopadding group commenter-inputs">
+
+          <div class="grid-1-2">
+            <label for="author" class="screen-reader">Name*</label>
+            <input type="text" placeholder="Name (required)" required="" name="author" id="author" value="" class="infoput">
+          </div>
+
+          <div class="grid-1-2">
+            <label for="email" class="screen-reader">Email</label>
+            <input placeholder="Email (required)" required="" type="email" name="email" id="email" value="" class="infoput">
+          </div>
+
+          <!-- <div class="grid-1-3">
+            <label for="url" class="screen-reader">Website</label>
+            <input placeholder="Website (optional)" type="url" name="url" id="url" value="" class="infoput">
+          </div> -->
+
+        </div>
+        
+        <div class="comment-wrap">
+          <label for="comment" class="screen-reader">Comment</label>
+          <textarea name="comment" id="comment" cols="100" rows="10" placeholder="Your comment here. Be cool."></textarea><div id="markdown_comment" class="comment-content markdown-comment-preview"></div><div class="preview-buttons" id="preview-buttons">          <a href="https://css-tricks.com/almanac/properties/z/z-index/#0" id="writeCommentButton" class="commentPreviewButton active">Write</a>          <a href="https://css-tricks.com/almanac/properties/z/z-index/#0" id="previewCommentButton" class="commentPreviewButton">Preview</a></div>
+        </div>
+
+        <div class="posting-code">
+  <h4>Posting Code</h4>
+
+  <p>We highly encourage you to post problematic HTML/CSS/JavaScript <a href="http://codepen.io/pen">over on CodePen</a> and include the link in your post. It's much easier to see, understand, and help with when you do that.</p>
+
+  <p><a href="http://en.support.wordpress.com/markdown-quick-reference/">Markdown</a> is supported, so you can write inline code like `&lt;div&gt;this&lt;/div&gt;` or multiline blocks of code in in triple backtick fences like this:</p>
+
+  <pre><code>```
+&lt;script&gt;
+  function example() {
+    element.innerHTML = "&lt;div&gt;code&lt;/div&gt;";
+  }
+&lt;/script&gt;
+```</code></pre>
+</div>
+        <input type="hidden" name="comment_post_ID" value="14142" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+
+        <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="e441e181b3"></p>		<p class="antispam-group antispam-group-q" style="clear: both; display: none;">
+			<label>Copy and paste this code: <strong class="antspmpro-input-a">micuno</strong> <span class="required">*</span></label>
+			<input type="hidden" name="antspmpro-a" class="antispam-control antispam-control-a" value="micuno">
+			<input type="text" name="antspmpro-q-luwele" class="antispam-control antispam-control-q" value="4.1">
+		</p>
+		<p class="antispam-group antispam-group-e" style="display: none;">
+			<label>Leave this field empty</label>
+			<input type="text" name="antspmpro-e-email-url-website-luwele" class="antispam-control antispam-control-e" value="">
+		</p>
+<p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p><p style="display: none;"></p>
+        <div class="comment-form-button-wrap">
+          <input name="submit" type="submit" class="button" id="submit" value="Submit Comment">
+
+          <a rel="nofollow" id="cancel-comment-reply-link" href="https://css-tricks.com/almanac/properties/z/z-index/#respond" style="display:none;">Cancel Reply</a>        </div>
+
+    </form>
+
+    
+  </div>
+
+</section>
+  </section>
+  <aside class="grid-1-3 entry-unrelated sidebar">
+
+  <div class="module">
+
+    <h4>Front End Design &amp; Development Jobs</h4>
+
+    
+    
+    
+    <ul class="job-list">
+
+            <li>
+                <a href="http://codepen.io/job/JzoxrA">
+          <strong>
+            AltspaceVR          </strong>
+          is hiring a
+          Virtual Reality Front End UI Engineer        </a>
+      </li>
+            <li>
+                <a href="https://www.amazon.jobs/en/jobs/383836">
+          <strong>
+            Amazon Web Services          </strong>
+          is hiring a
+          Web Development Engineer        </a>
+      </li>
+            <li>
+                <a href="http://www.taotesting.com/career/senior-front-end-developer/">
+          <strong>
+            Open Assessment Technologies          </strong>
+          is hiring a
+          Senior Front-end Developer        </a>
+      </li>
+      
+    </ul>
+
+    <a href="https://css-tricks.com/jobs/" class="button">See More Jobs</a>
+    &nbsp;
+    <a href="http://codepen.io/jobs/post/" class="button button-bold">Post a Job</a>
+
+  </div>
+
+  <div class="module">
+
+    <h4>We recommend Media Temple web hosting</h4>
+
+    <p>CSS-Tricks has been on Media Temple hosting since day one and they have helped me tremendously along the way.</p>
+
+    <p><a href="http://bit.ly/1O3LAHG"><strong>Use this link</strong></a> and coupon code <strong>CSSTRICKS</strong> to save 20% on every payment for a <em>year</em>.</p>
+
+  </div>
+
+  <a href="http://bit.ly/1RY2jjl" class="module module-ad wufoo-ad-6">
+
+  <svg viewBox="0 0 612 612">
+    <rect x="151.96" y="433.3" width="307.69" height="92.41" rx="5" ry="5" fill="#7EC4E1"></rect>
+    <g class="wufoo-logo">
+      <path id="w" d="M106,177.61L61.82,78.31l29.92-5.82,13.52,37.39c4.19,11.67,8.74,25.19,12.51,35.5l0.31-.06c-0.74-12-1-24.93-1.16-38l-0.81-39.54L145.87,62l14.28,38.84c4.16,11.52,7.62,21.89,11.29,33.34l0.31-.06C171,122.2,170.49,109.51,170,97L168.7,57.51,196.92,52l-5.37,108.93-30.38,5.91L146.3,127.5c-3.31-8.8-6.59-18.25-10.38-30.31l-0.31.06c0.7,12.67,1.21,22.65,1.16,32.27l0,42.09Z" stroke="#231f20" style="stroke-dashoffset: 1e-05px; stroke-dasharray: none; fill: rgb(206, 73, 39); stroke: rgb(206, 73, 39); transform: matrix(1, 0, 0, 1, 0, 0);" data-svg-origin="0 0"></path>
+      <path id="u" d="M231.82,81.64l-8.34,59.42c-2.23,15.87,1.95,25.65,13,27.2,11.2,1.57,17.8-5.91,20.14-22.55l8.34-59.42,28.16,4L285,148.11c-4.54,32.36-23,46.42-52.41,42.29-28.78-4-41.66-21.87-36.92-55.63l8-57.09Z" stroke="#231f20" style="stroke-dashoffset: 1e-05px; stroke-dasharray: none; fill: rgb(206, 73, 39); stroke: rgb(206, 73, 39); transform: matrix(1, 0, 0, 1, 0, 0);" data-svg-origin="0 0"></path>
+      <path id="f" d="M286.14,65.84l67.77-5.65,1.92,23-39.44,3.29L318,106.05,355.11,103l1.9,22.85-37.09,3.09L323.26,169l-28.33,2.36Z" stroke="#231f20" style="stroke-dashoffset: 1e-05px; stroke-dasharray: none; fill: rgb(206, 73, 39); stroke: rgb(206, 73, 39); transform: matrix(1, 0, 0, 1, 0, 0);" data-svg-origin="0 0"></path>
+      <path id="o-1" d="M461,130.16c0,34.1-20.43,55.78-53.11,55.78-32.84,0-50.91-24.67-50.91-54.05,0-30.8,20.27-55.31,52.64-55.31C443.75,76.58,461,101.88,461,130.16Zm-74,1.26c0,19.8,8.64,32.06,22.31,32.06S431,150.12,431,131.1C431,112.88,422.85,99,409.18,99,395.67,99,387,111.93,387,131.42Z" stroke="#231f20" style="stroke-dashoffset: 1e-05px; stroke-dasharray: none; fill: rgb(206, 73, 39); stroke: rgb(206, 73, 39); transform: matrix(1, 0, 0, 1, 0, 0);" data-svg-origin="0 0"></path>
+      <path id="o-2" d="M550.18,104.47c0,34.1-20.43,55.78-53.11,55.78-32.84,0-50.91-24.67-50.91-54.05,0-30.8,20.27-55.31,52.64-55.31C532.9,50.89,550.18,76.19,550.18,104.47Zm-74,1.26c0,19.8,8.64,32.06,22.31,32.06s21.68-13.36,21.68-32.37c0-18.23-8.17-32.06-21.84-32.06C484.81,73.36,476.17,86.25,476.17,105.73Z" stroke="#231f20" style="stroke-dashoffset: 1e-05px; stroke-dasharray: none; fill: rgb(206, 73, 39); stroke: rgb(206, 73, 39); transform: matrix(1, 0, 0, 1, 0, 0);" data-svg-origin="0 0"></path>
+    </g>
+
+    <rect x="60" y="331" width="490" height="63" fill="#fff" stroke="#231f20"></rect>
+
+    <text transform="translate(59 315)" font-size="31" fill="#231f20" font-weight="700">Build custom web forms easily.</text>
+    <text transform="translate(236.91 493.1)" font-size="40.76" fill="white" font-weight="700">Sign Up</text>
+    <text transform="translate(77 371)" font-size="31" fill="#969696">Let's get started!</text>
+
+    <g id="dino" data-svg-origin="0 0" style="transform: matrix3d(0.999991, -0.00435863, 0, 0, 0.00435863, 0.999991, 0, 0, 0, 0, 1, 0, -0.463788, 0, 0, 1);">
+      <path fill="#E41E26" d="M533.6,232.7c-0.3-0.1-0.6-0.2-0.9-0.3C533,232.5,533.3,232.6,533.6,232.7z M535.1,233.1
+		c-0.3,0-0.6-0.1-0.9-0.2C534.5,233,534.7,233,535.1,233.1z M536.6,233.2c-0.3,0-0.7,0-1-0.1C535.9,233.2,536.3,233.2,536.6,233.2z
+		 M531.2,231.7c0.3,0.1,0.6,0.3,0.8,0.4C531.8,232,531.5,231.8,531.2,231.7z M538.6,233.2c-0.5,0.1-1,0.1-1.5,0.1
+		C537.6,233.3,538.1,233.3,538.6,233.2z M528.4,229.9c0.3,0.2,0.6,0.4,0.8,0.6C528.9,230.3,528.7,230.1,528.4,229.9z M524.2,226.1
+		c0.3,0.3,0.6,0.6,0.9,0.9C524.8,226.7,524.5,226.4,524.2,226.1z M527,228.8c0.3,0.2,0.6,0.5,0.8,0.7
+		C527.5,229.2,527.3,229,527,228.8z M525.6,227.5c0.3,0.3,0.6,0.5,0.8,0.8C526.1,228,525.9,227.8,525.6,227.5z M518.7,219.4
+		c0.3,0.5,0.7,0.9,1,1.4C519.4,220.3,519.1,219.9,518.7,219.4z M517.4,217.4c0.4,0.5,0.7,1.1,1.1,1.6
+		C518.1,218.5,517.8,218,517.4,217.4z M520.1,221.2c0.3,0.4,0.6,0.8,0.9,1.2L520.1,221.2z M521.4,223c0.3,0.4,0.6,0.8,0.9,1.1
+		C522,223.7,521.7,223.3,521.4,223z M522.8,224.6c0.3,0.3,0.6,0.7,0.9,1C523.4,225.2,523.1,224.9,522.8,224.6z M529.8,230.9
+		c0.3,0.2,0.6,0.3,0.8,0.5C530.4,231.2,530.1,231,529.8,230.9z"></path>
+      <path fill="#8EC23F" d="M536.6,233.2c-0.3,0-0.7,0-1-0.1C535.9,233.2,536.3,233.2,536.6,233.2z M535.1,233.1
+		c-0.3,0-0.6-0.1-0.9-0.2C534.5,233,534.7,233,535.1,233.1z M533.6,232.7c-0.3-0.1-0.6-0.2-0.9-0.3
+		C533,232.5,533.3,232.6,533.6,232.7z M531.2,231.7c0.3,0.1,0.6,0.3,0.8,0.4C531.8,232,531.5,231.8,531.2,231.7z M538.6,233.2
+		c-0.5,0.1-1,0.1-1.5,0.1C537.6,233.3,538.1,233.3,538.6,233.2z M525.6,227.5c0.3,0.3,0.6,0.5,0.8,0.8
+		C526.1,228,525.9,227.8,525.6,227.5z M524.2,226.1c0.3,0.3,0.6,0.6,0.9,0.9C524.8,226.7,524.5,226.4,524.2,226.1z M528.4,229.9
+		c0.3,0.2,0.6,0.4,0.8,0.6C528.9,230.3,528.7,230.1,528.4,229.9z M522.8,224.6c0.3,0.3,0.6,0.7,0.9,1
+		C523.4,225.2,523.1,224.9,522.8,224.6z M521.4,223c0.3,0.4,0.6,0.8,0.9,1.1C522,223.7,521.7,223.3,521.4,223z M517.4,217.4
+		c0.4,0.5,0.7,1.1,1.1,1.6C518.1,218.5,517.8,218,517.4,217.4z M518.7,219.4c0.3,0.5,0.7,0.9,1,1.4
+		C519.4,220.3,519.1,219.9,518.7,219.4z M520.1,221.2c0.3,0.4,0.6,0.8,0.9,1.2L520.1,221.2z M527,228.8c0.3,0.2,0.6,0.5,0.8,0.7
+		C527.5,229.2,527.3,229,527,228.8z M529.8,230.9c0.3,0.2,0.6,0.3,0.8,0.5C530.4,231.2,530.1,231,529.8,230.9z"></path>
+
+      <lineargradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="643.465" y1="316.6403" x2="597.6864" y2="82.4081" gradientTransform="matrix(0.9533 -0.3021 0.3021 0.9533 -50.5851 215.0953)">
+        <stop offset="6.000000e-03" style="stop-color:#1E7086"></stop>
+        <stop offset="0.176" style="stop-color:#33839D"></stop>
+        <stop offset="0.348" style="stop-color:#4192B1"></stop>
+        <stop offset="0.473" style="stop-color:#4699BA"></stop>
+        <stop offset="0.613" style="stop-color:#4293B2"></stop>
+        <stop offset="0.792" style="stop-color:#3685A0"></stop>
+        <stop offset="0.991" style="stop-color:#207187"></stop>
+        <stop offset="1" style="stop-color:#1E7086"></stop>
+      </lineargradient>
+      <path fill="url(#SVGID_2_)" d="M639.5,190.8c-3.4-36.5,17.6-118.2-108.5-109.7l0,0c0,0-23.1,1-21.9,23.3
+		c1.2,22.4,6.2,36.9,9.6,50.4c0,0-21.8,20.1-16.1,33.8c5.7,13.7,20.7,46.7,35.9,44.6c15.3-2.1,48.4-15.3,61.4-23.1
+		c0,0,7,72.4,9.4,99.9c0.7,7.9,2.1,22.4,5.2,41.2c18.6-9.2,37.3-18.3,56.1-27.2C654.3,275.8,641.9,216.3,639.5,190.8z"></path>
+
+      <ellipse transform="matrix(0.9533 -0.3021 0.3021 0.9533 -15.9028 180.912)" fill="#FFFFFF" cx="576.9" cy="141.9" rx="13" ry="22.9"></ellipse>
+
+      <ellipse transform="matrix(0.9533 -0.3021 0.3021 0.9533 -16.5344 179.6383)" fill="#231815" cx="572.5" cy="143.3" rx="8.3" ry="14.7"></ellipse>
+      <path fill="#85BFD2" d="M621.6,237.7c-1.1-8.9-9.4-42.7-11.6-46.2c-2.1-3.4-4.9-18.6-47.2,7.1c-31.2,18.9-42.9,18.3-46.8,16.7
+		c6.5,10.3,14.5,18.9,22.5,17.8c15.2-2.1,48.4-15.3,61.4-23.1c0,0,7,72.4,9.4,99.9c0.7,7.9,2.1,22.4,5.2,41.2
+		c8.1-4,16.2-8,24.3-11.9C627.4,287.8,622.2,242.4,621.6,237.7z"></path>
+      <g opacity="0.6">
+
+        <lineargradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="506.196" y1="467.0849" x2="553.5162" y2="428.8841" gradientTransform="matrix(0.9533 -0.3021 -0.3021 -0.9533 134.293 798.5026)">
+          <stop offset="0" style="stop-color:#7AB3C4"></stop>
+          <stop offset="0.87" style="stop-color:#7AB3C4"></stop>
+          <stop offset="1" style="stop-color:#7AB3C4"></stop>
+        </lineargradient>
+        <path fill="url(#SVGID_3_)" d="M517.3,217.2c-0.4-0.6-0.8-1.2-1.2-1.8c0,0,0,0,0,0C516.5,216,516.9,216.6,517.3,217.2z"></path>
+
+        <lineargradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="553.1611" y1="525.1908" x2="600.4362" y2="487.0253" gradientTransform="matrix(0.9533 -0.3021 -0.3021 -0.9533 134.293 798.5026)">
+          <stop offset="0" style="stop-color:#7AB3C4"></stop>
+          <stop offset="0.87" style="stop-color:#7AB3C4"></stop>
+          <stop offset="1" style="stop-color:#7AB3C4"></stop>
+        </lineargradient>
+        <path fill="url(#SVGID_4_)" d="M538.2,100c12.1-9.4,47.7-11.3,71-6c-16-9.9-40.5-15.4-78.2-12.9c0,0-23.1,1-21.9,23.3
+			s6.2,36.9,9.6,50.4c0,0-21.8,20.1-16.1,33.8c2.7,6.5,7.5,17.4,13.5,26.7c3.5,1.4,13,2,36.6-10.9c-0.4-1.7-1.2-4-2.6-6.8
+			c-6-11.7-16.1-20.8-6.2-35.3C553.8,147.8,524.3,110.8,538.2,100z"></path>
+      </g>
+      <path fill="#1E7086" d="M533.8,137.1c2.6,9.5,1.4,13-1,13.7c-2.4,0.7-5-1.8-7.6-11.3c-2.6-9.5-2.8-17.7-0.4-18.4
+		C527.1,120.5,531.2,127.6,533.8,137.1z"></path>
+
+      <lineargradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="681.5992" y1="201.3821" x2="624.5172" y2="323.9237" gradientTransform="matrix(0.9533 -0.3021 0.3021 0.9533 -50.5851 215.0953)">
+        <stop offset="0" style="stop-color:#7AB3C4"></stop>
+        <stop offset="0.86" style="stop-color:#7AB3C4"></stop>
+        <stop offset="1" style="stop-color:#7AB3C4"></stop>
+      </lineargradient>
+      <path opacity="0.4" fill="url(#SVGID_5_)" enable-background="new    " d="M639.8,193.5c-3.4,3.6-9,11.7-7,23.6
+		c0,0,7.2,57.4,25.2,112.9c4.2-2,8.3-4,12.5-6C654.9,277.5,642.7,220.3,639.8,193.5z"></path>
+
+      <lineargradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="611.5856" y1="236.8385" x2="647.111" y2="236.8385" gradientTransform="matrix(0.9533 -0.3021 0.3021 0.9533 -50.5851 215.0953)">
+        <stop offset="0" style="stop-color:#4699BA"></stop>
+        <stop offset="0.951" style="stop-color:#4699BA"></stop>
+        <stop offset="1" style="stop-color:#4699BA"></stop>
+      </lineargradient>
+      <path fill="url(#SVGID_6_)" d="M623.9,218.4c-3.2-25.8-11.1-40.6-11.1-40.6c3.7-7.1-2.9-17.7-2.9-17.7
+		c5.7,13.7-27.3,27.3-27.3,27.3l-0.2,0.9c23.7-10.1,25.8,0.5,27.6,3.3c2.1,3.4,10.5,37.3,11.6,46.2c0.6,4.7,5.8,50.1,17.2,101.6
+		c2.3-1.1,4.5-2.2,6.8-3.3C637.6,304.6,626.9,242.5,623.9,218.4z"></path>
+
+      <lineargradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="540.0744" y1="428.1269" x2="622.0959" y2="428.1269" gradientTransform="matrix(0.9533 -0.3021 -0.3021 -0.9533 134.293 798.5026)">
+        <stop offset="0" style="stop-color:#FFFFFF"></stop>
+        <stop offset="0.87" style="stop-color:#FFFFFF"></stop>
+        <stop offset="1" style="stop-color:#FFFFFF"></stop>
+      </lineargradient>
+      <path opacity="0.35" fill="url(#SVGID_7_)" enable-background="new    " d="M538.6,233.2c15.3-2.1,48.4-15.3,61.4-23.1
+		c0.3-11.9-18.7,0-33,3.6c-9.6,2.4-14-3.9-15.8-8.4c-22.5,12-31.6,11.4-35.1,10C522.6,225.7,530.5,234.3,538.6,233.2z"></path>
+
+      <lineargradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="592.8458" y1="312.0763" x2="606.6599" y2="312.0763" gradientTransform="matrix(0.9533 -0.3021 0.3021 0.9533 -50.5851 215.0953)">
+        <stop offset="0" style="stop-color:#FFFFFF"></stop>
+        <stop offset="1" style="stop-color:#FFFFFF"></stop>
+      </lineargradient>
+      <path opacity="0.35" fill="url(#SVGID_8_)" enable-background="new    " d="M617.7,315.7l-8.1-1.9c0.8,8.3,2.2,21.3,4.8,37.4
+		c3.1-1.5,6.3-3.1,9.4-4.6C619.5,327.7,617.7,315.7,617.7,315.7z"></path>
+    </g>
+  </svg>
+  
+</a>
+
+  <div class="module module-poll">
+    <div id="polls-55" class="wp-polls">
+	<form id="polls_form_55" class="wp-polls-form" action="https://css-tricks.com/index.php" method="post">
+		<p style="display: none;"><input type="hidden" id="poll_55_nonce" name="wp-polls-nonce" value="0a9421a96d"></p>
+		<p style="display: none;"><input type="hidden" name="poll_id" value="55"></p>
+		<h4>What is your preferred nomenclature here?</h4>
+
+<div id="polls-55-ans" class="wp-polls-ans">
+
+<ul class="wp-polls-ul group">
+		<li class="group"><input type="radio" id="poll-answer-309" name="poll_55" value="309"> <label for="poll-answer-309">Front-End</label></li>
+		<li class="group"><input type="radio" id="poll-answer-310" name="poll_55" value="310"> <label for="poll-answer-310">Front End</label></li>
+		<li class="group"><input type="radio" id="poll-answer-311" name="poll_55" value="311"> <label for="poll-answer-311">Front-end</label></li>
+		<li class="group"><input type="radio" id="poll-answer-312" name="poll_55" value="312"> <label for="poll-answer-312">Front end</label></li>
+		<li class="group"><input type="radio" id="poll-answer-313" name="poll_55" value="313"> <label for="poll-answer-313">front-end</label></li>
+		<li class="group"><input type="radio" id="poll-answer-314" name="poll_55" value="314"> <label for="poll-answer-314">front end</label></li>
+		<li class="group"><input type="radio" id="poll-answer-315" name="poll_55" value="315"> <label for="poll-answer-315">frontend</label></li>
+		</ul>
+<p class="voting-buttons"><input type="button" name="vote" value="   Vote   " class="button" onclick="poll_vote(55);"> &nbsp; <a href="https://css-tricks.com/almanac/properties/z/z-index/#ViewPollResults" onclick="poll_result(55); return false;" class="button" title="View Results Of This Poll">View Results</a></p>
+</div>
+	</form>
+</div>
+  </div>
+</aside>
+
+</div>
+
+
+    </div>
+  </div>
+  <div class="keep-going">
+
+    <h4>There's <strong>a whole bunch</strong> of content on CSS-Tricks.</h4>
+
+    <p>
+      <a href="https://css-tricks.com/almanac/properties/z/z-index/#search-form" id="search-for-stuff-link">Search for Stuff</a>
+      &nbsp;
+      •
+      &nbsp;
+      <a href="https://css-tricks.com/archives/">Browse the Archives</a>
+    </p>
+
+  </div>
+
+  <form action="https://chriscoyier.us2.list-manage.com/subscribe/post?u=155f5a9ccc4e24c318130cace&amp;id=197f127a68" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+    <p class="mc-field-group">
+      Get the Newsletter
+      <label for="mce-EMAIL" class="screen-reader">Email Address</label>
+      <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="your@email.com">
+      <input type="submit" value="Subscribe" name="Subscribe" id="mc-embedded-subscribe" class="button">
+      <span class="get-rss-feed">... or get the <a href="http://feeds.feedburner.com/CssTricks">RSS feed</a></span>
+    </p>
+    <div id="mce-responses" class="clear">
+      <div class="response" id="mce-error-response" style="display:none"></div>
+      <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_155f5a9ccc4e24c318130cace_197f127a68" value=""></div>
+
+  </form>
+
+  <div class="footer-wrap">
+
+    <div class="page-wrap">
+
+      <section class="footer-calls-to-action">
+
+        <footer class="site-footer site-footer-codepen">
+          <h4>Go explore CodePen!</h4>
+          <p>As a front end designer and developer, you should have an account on <a href="http://codepen.io/">CodePen</a> so you can save your snippets, present your ideas, and engage with other front end folk. I'd encourage you to go PRO as well, to unlock the full power of CodePen.</p>
+          <a href="http://codepen.io/pro/" class="button">Go PRO on CodePen</a>
+        </footer>
+
+        <footer class="site-footer site-footer-social">
+          <h4>Let's be friends!</h4>
+          <p>I'm active on <a href="http://codepen.io/chriscoyier/">CodePen</a>, <a href="https://twitter.com/chriscoyier">Twitter</a>, <a href="http://dribbble.com/chriscoyier">Dribbble</a>, and <a href="https://github.com/chriscoyier/">GitHub</a>. CSS-Tricks is on <a href="http://twitter.com/real_css_tricks">Twitter</a> and <a href="http://facebook.com/CSSTricks">Facebook</a>, which are mostly just a way to follow new content. There is a <a href="http://www.youtube.com/realcsstricks">YouTube channel</a> for the screencasts as well.</p>
+          <a href="https://twitter.com/chriscoyier" class="button">@chriscoyier</a>
+          <a href="https://twitter.com/real_css_tricks" class="button">@real_css_tricks</a>
+        </footer>
+
+        <footer class="site-footer site-footer-shoptalk">
+          <h4>Listen to ShopTalk!</h4>
+          <p><a href="http://shoptalkshow.com/">ShopTalk Show</a> is a weekly audio podcast I do with my friend <a href="http://daverupert.com/">Dave Rupert</a>. We have guests on to help us answer <a href="http://shoptalkshow.com/ask/">your questions</a> about all things web design and development.</p>
+          <a class="button" href="http://itunes.apple.com/podcast/id493890455">Subscribe on iTunes</a>
+        </footer>
+
+                <footer class="site-footer site-footer-lodge">
+          <h4>Subscribe to The Lodge!</h4>
+          <p><a href="https://css-tricks.com/lodge/">The Lodge</a> is a members-only, ad-free video learning area here on CSS-Tricks. Just like the free screencasts, but organized into four large complete series. Membership is also the #1 best way to support CSS-Tricks.</p>
+          <a href="https://css-tricks.com/lodge/signup/" class="button">Signup for The Lodge</a>
+        </footer>
+        
+      </section>
+
+      <footer class="site-footer site-footer-colophon">
+        <p>CSS-Tricks* is created, written by, and maintained by <a href="http://chriscoyier.net/">Chris Coyier</a> and <a href="https://css-tricks.com/about/">a team</a> of swell people. It is built on <a href="http://wordpress.org/">WordPress</a>, hosted by <a href="http://bit.ly/1n2DZjU">Media Temple</a>, and the assets are served by <a href="http://tracking.maxcdn.com/c/13088/3982/378">MaxCDN</a>. The fonts are Source Sans Pro and PT Serif. It is made possible by viewers like you who subscribe to <a href="https://css-tricks.com/lodge/">The Lodge</a> and through <a href="https://css-tricks.com/advertising/">sponsorships</a> from products and services we like.</p>
+      </footer>
+
+      <footer class="site-footer site-footer-links">
+        <p>
+          <a href="https://css-tricks.com/contact/">Contact</a>
+          <a href="https://css-tricks.com/about/">About</a>
+          <a href="https://css-tricks.com/advertising/">Advertise</a>
+          <a href="https://css-tricks.com/guest-posting/">Guest Posting</a>
+          <a href="https://css-tricks.com/license/">License</a>
+          <a href="https://css-tricks.com/shop/">Shop</a>
+          <a href="https://css-tricks.com/jobs/">Jobs</a>
+          <a href="https://css-tricks.com/subscription-options/">Subscribe</a>
+        </p>
+        <p class="mega-big-time-warning"><small>*May or may not contain any actual "CSS" or "Tricks".</small></p>
+      </footer>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.61569 388.51709" class="logo-footer">
+        <path d="M156.584,238.9995l-88.2989,64.752c-10.5932,7.06342-18.8369,11.77341-29.4306,11.77341
+          C17.6606,315.5249,0,296.68799,0,275.49371c0-17.66022,14.1308-30.61142,27.081-36.49422l103.60259-44.7412L27.081,148.34419
+          C12.9541,142.457,0,129.50681,0,111.8462c0-21.1904,18.8369-38.8506,40.0312-38.8506c10.5972,0,17.6607,3.5332,28.2539,11.7734
+          l88.2989,64.7515L144.8105,44.7417C141.2802,20.0176,157.7646,0,181.3076,0c23.54829,0,40.03079,18.8369,36.4975,43.561
+          l-11.77341,105.95949l88.29881-64.7515c10.59769-8.2402,18.83789-11.7734,29.43561-11.7734
+          c21.18939,0,38.84958,17.6602,38.84958,38.8506c0,18.83691-12.94919,30.6108-27.0762,36.49799L231.9321,194.2583l103.60739,44.7412
+          c14.12701,5.8828,27.0762,18.834,27.0762,37.67479c0,21.1904-18.83591,38.85062-40.02731,38.85062
+          c-9.41998,0-17.66019-4.70999-28.25787-11.77341l-88.29881-64.752l11.77341,104.77931
+          c3.53329,24.7236-12.9492,44.73828-36.4975,44.73828c-23.543,0-40.0274-18.83789-36.4971-43.56149L156.584,238.9995z"></path>
+      </svg>
+
+    </div>
+
+  </div>
+
+  <svg width="0" height="0" class="screen-reader">
+
+  <defs>
+
+    <path id="shape-link" d="M74.957.955h-15.139c-1.307 0-2.59.1-3.844.293l-.811.151c4.645 2.666 8.469 6.605 10.986 11.343h9.584c7.322 0 13.258 5.937 13.258 13.259 0 7.321-5.938 13.258-13.258 13.258h-16.555c-3.305 0-6.324-1.212-8.645-3.212l-.004.003-.002-.003c-.494-.414-.886-.802-1.206-1.148-.7-.764-1.011-1.303-1.011-1.303l.002-.003-.002-.003c-1.505-2.15-2.389-4.766-2.389-7.589 0-2.746.834-5.296 2.263-7.413l.127-.176c-1.736-1.473-3.978-2.367-6.429-2.367h-5.041c-1.325 3.052-2.067 6.416-2.067 9.956 0 3.538.737 6.903 2.061 9.955.244.562.509 1.11.792 1.651.237.449.482.896.746 1.332l.054.088.147.23c2.792 4.463 6.948 7.98 11.888 9.973.608.246 1.225.473 1.856.67l.104.031.318.09c.27.08.541.162.814.232l.01.003c2 .513 4.096.787 6.254.787h15.137c13.832.001 25.045-11.212 25.045-25.043s-11.211-25.045-25.043-25.045zM25.542 51.045h15.137c1.308 0 2.592-.102 3.846-.294l.811-.151c-4.646-2.664-8.47-6.604-10.987-11.342h-9.585c-7.322 0-13.257-5.936-13.257-13.259 0-7.322 5.935-13.257 13.257-13.257h16.555c3.304 0 6.323 1.212 8.645 3.212l.002-.003.002.003c.495.413.888.801 1.206 1.148.701.762 1.012 1.302 1.012 1.302l-.002.003.002.003c1.506 2.15 2.391 4.766 2.391 7.588 0 2.746-.835 5.297-2.264 7.412l-.127.176c1.735 1.475 3.979 2.369 6.428 2.369h5.043c1.324-3.053 2.064-6.417 2.064-9.957 0-3.539-.736-6.903-2.061-9.955-.244-.561-.51-1.111-.792-1.651-.237-.451-.481-.898-.746-1.332l-.054-.089-.146-.23c-2.792-4.463-6.949-7.981-11.888-9.973-.608-.245-1.226-.471-1.856-.67l-.103-.032-.318-.089c-.27-.081-.541-.162-.816-.232l-.009-.002c-2-.515-4.095-.788-6.255-.788h-15.135c-13.832 0-25.044 11.212-25.044 25.044 0 13.833 11.212 25.046 25.044 25.046z"></path>
+
+    <path id="shape-search" d="M3.327,96.684C5.534,98.895,8.434,100,11.331,100s5.797-1.105,8.004-3.316l21.321-21.322
+    c5.83,3.188,12.393,4.897,19.223,4.897c10.721,0,20.798-4.172,28.379-11.752c15.646-15.644,15.646-41.105,0.002-56.755
+    C80.677,4.171,70.598,0,59.877,0C49.159,0,39.08,4.171,31.504,11.752c-7.581,7.576-11.756,17.655-11.756,28.376
+    c0,6.832,1.71,13.396,4.9,19.226L3.327,80.675C-1.096,85.094-1.096,92.266,3.327,96.684z M59.879,68.938
+    c-7.695,0-14.93-2.996-20.371-8.435c-5.443-5.442-8.439-12.677-8.439-20.375c0-7.695,2.996-14.933,8.439-20.372
+    c5.441-5.44,12.676-8.436,20.369-8.436c7.698,0,14.936,2.997,20.378,8.436c11.231,11.236,11.231,29.515,0,40.747
+    C74.812,65.941,67.575,68.938,59.879,68.938z"></path>
+
+    <path id="shape-arrow-right" d="M0,49.993c0,7.387,6.007,13.394,13.396,13.394h40.691L42.898,74.407c-2.543,2.507-3.94,5.827-3.94,9.36
+    c0,3.539,1.407,6.863,3.952,9.364C45.428,95.616,48.809,97,52.402,97c3.6,0,6.978-1.384,9.516-3.891l34.159-33.623
+    c2.53-2.489,3.923-5.81,3.923-9.342v-0.307c0-3.545-1.4-6.867-3.943-9.358L61.914,6.869c-5.243-5.16-13.775-5.16-19.014,0
+    c-2.539,2.495-3.942,5.821-3.942,9.354c0,3.535,1.403,6.862,3.942,9.354L54.1,36.604H13.396C6.012,36.604,0.001,42.61,0,49.993z"></path>
+
+  </defs>
+
+</svg>
+
+	<script>var markdownify = {"ajax_url":"\/wp-admin\/admin-ajax.php","nonce":"1656c5f6d3"};</script><script type="text/javascript" src="./z-index _ CSS-Tricks_files/form.js"></script>
+<script>var pollsL10n = {"ajax_url":"https:\/\/css-tricks.com\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"0","show_fading":"1"};</script><script>var antispampro_vars = {"code":"micuno","input_name_suffix":"luwele"};</script><script type="text/javascript" src="./z-index _ CSS-Tricks_files/wp-embed.min.js"></script>
+<script type="text/javascript" src="./z-index _ CSS-Tricks_files/minqueue-2fc16c1f-7097148d.js"></script>
+<script type="text/javascript" src="./z-index _ CSS-Tricks_files/e-201608.js" async="" defer=""></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:3.9.1',blog:'45537868',post:'14142',tz:'-7',srv:'css-tricks.com'} ]);
+	_stq.push([ 'clickTrackerInit', '45537868', '14142' ]);
+</script>
+
+  
+<script src="./z-index _ CSS-Tricks_files/global-min.js"></script>
+<script async="" src="./z-index _ CSS-Tricks_files/ei.js"></script>
+
+
+  <script src="./z-index _ CSS-Tricks_files/almanac-single-ck.js"></script>
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-68528-29', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using apc
+Object Caching 4244/4360 objects using apc
+Content Delivery Network via cdn.css-tricks.com
+
+ Served from: css-tricks.com @ 2016-02-28 15:50:23 by W3 Total Cache --><img src="./z-index _ CSS-Tricks_files/g.gif" id="wpstats"><span style="height: 20px; width: 40px; position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; border: none; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAoCAYAAABpYH0BAAAHjElEQVR4Ae1bBXAbvRLO0GNmpv+VmflnZmZmZi4zMzMzM4Y58ZwTz4SZnZzpjLWzBa38Zs8aO332pdy7ma9JPmml1XfSaqXacfgYjRIcPrwP9u7dqSMKHDq0D5hmiLi4vDwJEH6/H86dOxcFdAQCfq5ZQUEexOHM8/l8cPbsWR0xADVD7eJwSuqCaANqpwt4MQTU9uiPLuDFErC1tVUDdFw0AV0l5VA1dS4Y7n4SUv7VD+J/0QHif3YT/1168Dmonb8MfBbr9StgIBDQBE9DE+Q//zYX69QP/3NBJP6pO1TPXgwBvx9trwu0S0BblgFSOwwigRJ+1xnyn3wVqqfNh6aVG6Fu7mIofudzSL1poCCk6aX3wO/1XV8C4ikkFjgKSiD5b71IlIIX3oHTbDayR5ji/GEdVU+dK8zS0m8mYDvXPLQJyDLw7CH3khjlTAx8LmSDYtbOXEg28b/sAPb8Qir3ebxg3ncY5MTUiz5Ir80BTTv2UX+R4KyownraBcRjSbRo3LaHhDDc8Ri0BgKcd5lboOTL0ZDPZqOclBpmh/XSuwwj2+IPv+a81+2B3DsfI75+/VbkLwpczTKkdx+B7fKNzSblCeVl42dA8j/78PLaZWtjbl+TgManXqPBWk4mBXmvF7KH3U98CnOKCRNmW/zul1QnvdfNnDMfPkEcomzklIsmYOWMBULbTdv3Ik8+J/+9N5UpRSXaBfR6vVEj5d99sUMeA/3/4xp3H0ROgFJbF2ZbMW66uun8thPnbAaJ4mMKG5CztAL5i4LGDduov6w+t4FPUahMzjJQWep/B6EgMbdPAno8nqhx6sfBTrMH3k1c6feTwlIW1kGYbdk3E9U4+PMOyPF69uQMqF+8Gk43y2R3MYBxSt5zCJpWb4ZWl1AmzM6CF9/V0r42AZP/3CP4RgfcRVzozEIYH3kxom3Bqx+qb/3f/ThXtXAlSI+9xPAytJxIpLp2FtilJ14F6dGXoPCT78AqmcDI4mtqx8Ec+S+/D0pdwwV9Lfl6QrDtJ14BW1Ep5/JZGpVz+6NsJfUnX9I6D+WcxMKTJgHdbnfUyBn+QHAJ/rojOOobOGfef0QQsHbBioi2Wf3vFDYgxqHzxDEBqW7l3MWq2DcNYEu+c1iYMDz0XJt+Kk1mnOU0251sk7MyEck+AnKDPkULbQJWz1LTEdNbn3FOzsolDpe4s7I6zM5aXAanfqrmgpVs1lpNheqy/2M38DjV+sYnXxUHd/ODUP7VeBbLbicOd9a2/KzbskuwRc7O/Cr7gmUKT71OZXjcLPt8JIclMUWbgE6nM2p4HQ4ekPlO2n045yoox2Nct+HYeJid6d0vQuLff3nuVTl/GXHSwy+o9RVFSNSL3vqMck1bcoa6Ef2+c5t+Fryj9lf+7STOoV/YRtWUuVRW+PrHyCFwWcakBQmoKEpM8LHlYHrmDXSM/y09qaY2mBo4mmWhfgNb4vE/+68QtNEBSZ1lbGYvovpNKapIyX/thUkuldWG7KzZg+9p08eMPreGhgahzHDvU2reuW4LcpqgWUAcfCCYQOPfbBn0FWMTu4FpZstaLiyCEpasJvymkxrP/jOAX0IoDgfmi8RbDRK1XzZ5NvGm594W+i54T51ZpZ+PiuifpbwCQwmd0d0O9QU4rFZI/EMXCjeYbrVbQIfDoRnNBkm4UMD8LkKApnzLXVwanGWpmULizV4KtRk6Q+qWrRX6ywiGDw7zgWMRfapavl59mXc/IZQ1HDlJZRhP0RetY78oAlYuWK7GMTZw64nE0CMbxaoSFgNPt8gkVPm0+VRufPwVag9nT8KvO1CZrbhMLauqoY0Iz9NOiyWiT/mvfED2FSOnCGWYCtFxkvmEXLsFtNvtmmF87i11Z500BwXCKxlQciSQ9x0BR1oWtHr4sQ47JTvp6deF2xniX3qPePYiBJvaXQeoLKPXzW36lNlX3anrWMwkexaLQzOBavbyeRl7EebMnJjHTgJarVbNSOs0hBySU7OQQ1CsxJ+R7LIG3k12Eku8G1nMzHv9I+IQhW98LNhUhOSGiSyhrz8eDzVMVF6uAlMiqpfDLipq2Xm7YulqtBETfnYZ3HAqCQwsiY9ns95skGIae7sFtDQ20hvFkwVuDNHaSvc/g3YC8EysxlC+Qwo2dZt2Ih+G8oUrhXrGR1+KWA83Ddq4RODlL852bQJaLBZNMEt56i0KW4ax2MrH4zE2CsvVcugEJP6e75Bs5+4ItqoawUaxWjEpFs7TRW9+CoosC/W8DCUffsN2224hu39/MG/cCbb4FDyrE48XGHhXiSEm1vG3W8Bmo4kuD5Sa2phscWkHZAvfdFySCeMmcvgf1vj5E/yJbznMLoCpU7YB7EyIQIscceBoh5cSGHudBiO4C0rwZpxCSiuDkmXAfpHHBBvttAsoy7I2VFUHA/WC5dhgrPZoQ5tEDHZYH+3+b59YjnVR0Eg89asR2gVUHaFTBfHXPy6egAhcQtrtdQERuoAtLS06NEAX8GIJaDabdWgAFxA/ptrQUBejsQ7UDLXjHzLPzExjREOUxjpQK9SsoMAIcewf/jWHQ4e0fM1B/5rDebD10oZZukwlAAAAAElFTkSuQmCC&quot;); background-color: transparent; background-size: 40px 20px;"></span></body></html>
