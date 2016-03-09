@@ -1,82 +1,101 @@
-/*TO DO: ADD MEDIA QUERIES (SEE CLASS 14 NOTES)*/
-
 html {
-	-webkit-font-smoothing: antialiased;
-}
-
-html, body {
 	height: 100%;
 	padding: 0px;
 	margin: 0px;
 }
 
-body {
-	overflow-y: scroll;
-	overflow-x: hidden;
+header {
+	height: 50px;
+	background-color: black;
 }
 
-::-webkit-scrollbar {
-    width: 8px;
-    background: #1a3742;
+.logo {
+	float: left;
+	color: white;
 }
 
-::-webkit-scrollbar-thumb {
-    background: #5D6D63;
-}
-
-::-moz-selection {
-    background-color: rgba(230,224,203,0.3);
-    color: #fff8e1;
-}
-
-::selection {
-    background-color: rgba(230,224,203,0.3);
-    color: #fff8e1;
-}
-
-body {
-   font-family: 'open_sansregular', Helvetica, Arial, sans-serif;
-	background-color: #1A3742;
-	background-size: cover;
-	background-position: top center;
-	background-attachment: fixed;
-	background-repeat: repeat-y;
-	color: #464e54;
-}
-
-h1 {
-	font-size: 5em;
-	font-family: 'Raleway';
-	font-weight: normal;
-	margin: 0px;
-}
-
-h2 {
-	color: #E6E0CB;
-	font-size: 3em;
-	font-family: 'Raleway';
-	font-weight: bold;
-	margin: 0px;
-	padding-bottom: 0.5em;
-	text-align: center;
-}
-
-p {
-	color: #E6E0CB;
-	font-size: 1em;
-	line-height: 26px;
+nav {
+	float: right;
 }
 
 a {
 	text-decoration: none;
-	color: #333;
 }
 
-a, a:visited, a:hover, a:active {
-    text-decoration: none;
-    color: #fff8e1;
+#home {
+	/*I want this to be the size of the browser on load */
+	height: 450px;
+	background-color: lightgray;
+	clear: both;
 }
 
+#about {
+	height: 450px;
+	background-color: dimgray;
+	padding: 20px 20px 50px;
+}
 
+.about {
+	display: inline-block;
+	width: 48%;
+	/*font-size: initial;*/
+	margin-left: 1%;
+}
 
+.about_image {
+	height: 170px;
+	width: 50%;
+	display: block;
+}
 
+#projects {
+	height: 450px;
+	background-color: darkgray;
+	padding: 20px 20px 50px;
+}
+
+.project-wrapper {
+	font-size: 0;
+}
+
+.project {
+	display: inline-block;
+	width: 24%;
+	font-size: initial;
+	margin-left: 1%;
+}
+
+.projects_header {
+	margin: 0 auto;
+}
+
+.project_image {
+	height: 170px;
+	width: 100%;
+	display: block;
+}
+
+.project_caption {
+	text-align: center;
+	padding: 5px;
+}
+
+#modals {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(100,100,100,0.8);
+}
+
+#contactUs {
+	height: 450px;
+	background-color: silver;
+}
+
+footer {
+	height: 50px;
+	background-color: black;
+}
