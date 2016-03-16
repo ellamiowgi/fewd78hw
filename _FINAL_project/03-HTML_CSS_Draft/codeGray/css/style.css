@@ -5,8 +5,13 @@ html {
 }
 
 header {
-	height: 50px;
+	/*height: 50px;*/
 	background-color: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 20px 0;
 }
 
 .logo {
@@ -14,12 +19,47 @@ header {
 	color: white;
 }
 
-nav {
+/*nav {
 	float: right;
-}
+}*/
 
 a {
 	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+.nav {
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.nav nav {
+	position: absolute;
+	right: 0
+}
+
+.nav nav a {
+	margin-left: 10px;
+	color: #fff;
+	transition: color 100ms ease;
+	-webkit-transition: color 100ms ease;
+	/*add other vendor prefixes*/
+}
+
+.nav nav a:hover 	{ color: #aaa; }
+.nav nav a:visited 	{ color: #fff; }
+
+
+.section {
+	padding: 20px 20px 50px;
+}
+
+.section_header {
+	font-size: 30px;
 }
 
 #home {
@@ -27,12 +67,13 @@ a {
 	height: 450px;
 	background-color: lightgray;
 	clear: both;
+	margin-top: 56px;
 }
 
 #about {
-	height: 450px;
+	/*min-height: 450px;*/
 	background-color: dimgray;
-	padding: 20px 20px 50px;
+	/*padding: 20px 20px 50px;*/
 }
 
 .about {
@@ -42,16 +83,52 @@ a {
 	margin-left: 1%;
 }
 
-.about_image {
-	height: 170px;
-	width: 50%;
+.about_header,
+.about_description {
+	text-align: center;
+	color: #fff;
+}
+
+.about_description {
+	margin-top: 10px;
+}
+
+.about-items {
+	font-size: 0;
+	width: 400px;
+	margin: 20px auto 0;
+	display: block;
+}
+
+.about_item {
+	width: 49%;
+	display: inline-block;
+	font-size: initial;
+}
+
+.about_item + .about_item {
+	margin-left: 2%;
+}
+
+.about_item_image {
+	height: auto;
+	width: 100%;
+}
+
+.about_item_caption {
+	color: #fff;
+	text-align: center;
+}
+
+.about_item_caption span {
+	margin-top: 10px;
 	display: block;
 }
 
 #projects {
-	height: 450px;
+	/*height: 450px;*/
 	background-color: darkgray;
-	padding: 20px 20px 50px;
+	/*padding: 20px 20px 50px;*/
 }
 
 .project-wrapper {
@@ -96,6 +173,22 @@ a {
 }
 
 footer {
-	height: 50px;
+	/*height: 50px;*/
 	background-color: black;
+	padding: 15px 0;
 }
+
+.socialIcons {
+	text-align: center;
+}
+
+.socialIcons > * + * {
+	margin-left: 20px;
+}
+
+.copyright {
+	color: #fff;
+	text-align: center;
+	margin-top: 10px;
+}
+

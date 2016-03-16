@@ -1,3 +1,15 @@
+<!-- 
+TO DO:
+...favicon
+...responsive across 3 breakpoints 
+
+JAVASCRIPT:
+...sticky nav
+...main area surprise
+...form
+- -->
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,34 +23,37 @@
 <body>
 
 	<header>
-			<div class="logo">codeGray</div>
-			<nav>
-				<a href="#">Home</a>
-				<a href="#">About</a>
-				<a href="#">Projects</a>
-				<a href="#">Contact</a>
-			</nav>
+			<div class="nav">
+				<a href="#" class="logo">codeGray</a>
+				<nav>
+					<a href="#">Home</a>
+					<a href="#">About</a>
+					<a href="#">Projects</a>
+					<a href="#">Contact</a>
+				</nav>
+			</div>
 	</header>
 	<div id="home">
 		<h1 class="home_header">codeGRAY</h1>
 		<h2 class="home_description">We craft clean, responsive code for web and mobile.</h2>
 	</div>
-	<div id="about">
-		<h1 class="about_header">About</h1>
+	<div id="about" class="section">
+		<h1 class="section_header about_header">About</h1>
 					<!-- TO DO: FILL OUT ABOUT DESCRIPTION -->
-		<h2 class="about_description">Ella and Jon are lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
-		<figure class="about_item">
-			<img class="about_item_image" src="images/fpo_ella.jpg" alt="ella gray">
-			<figcaption class="about_item_caption">ella gray <br>Producer, Front End Dev</figcaption>	
-		</figure>
-		<figure class="about_item">
-			<img class="about_item_image" src="images/fpo_jon.jpg" alt="jon gray">
-			<figcaption class="about_item_caption">jon gray <br>Full Stack Dev</figcaption>
-		</figure>
-		
+		<h2 class="about_description">Ella and Jon are lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+		<div class="about-items">
+			<figure class="about_item">
+				<img class="about_item_image" src="images/fpo_ella.jpg" alt="ella gray">
+				<figcaption class="about_item_caption"><span>ella gray</span><span>Producer, Front End Dev</span></figcaption>	
+			</figure>
+			<figure class="about_item">
+				<img class="about_item_image" src="images/fpo_jon.jpg" alt="jon gray">
+				<figcaption class="about_item_caption"><span>jon gray</span><span>Full Stack Dev</span></figcaption>
+			</figure>
+		</div>
 	</div>
-	<div id="projects">
-		<h1 class="projects_header">select projects</h1>
+	<div id="projects" class="section">
+		<h1 class="section_header projects_header">select projects</h1>
 					<!-- TO DO: FILL OUT PROJECT DESCRIPTION -->
 		<h2 class="projects_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2> 
 					<!-- TO DO: FILL OUT ALT INFO -->
@@ -163,8 +178,8 @@
 		</figure>
 	</div>
 
-	<div id="contactUs">
-		<h1 class="contactUs_header">contact us</h1>
+	<div id="contactUs" class="section">
+		<h1 class="section_header contactUs_header">contact us</h1>
 		<h2 class="contactUs_description">We're available for freelance work, so please do say hello!</h2>
 		<form class="contact_form">
 			<input type="text" id="first_name"placeholder="First Name">
@@ -184,10 +199,10 @@
 	</footer>
 
 
-<div>
+<!-- <div>
 	DELETE ME WHEN READY
 </div>
-
+ -->
 
 </body>
 </html>
