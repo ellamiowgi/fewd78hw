@@ -2,11 +2,16 @@
 TO DO:
 ...favicon
 ...responsive across 3 breakpoints 
+...modal windows
 
-JAVASCRIPT:
-...sticky nav
+JAVASCRIPT TO DO:
 ...main area surprise
 ...form
+...page sections align under nav item
+...landing page always size of browser
+...project hover animation
+
+
 - -->
 
 
@@ -22,20 +27,22 @@ JAVASCRIPT:
 </head>
 <body>
 
-	<header>
+	<header class="js-header">
 			<div class="nav">
-				<a href="#" class="logo">codeGray</a>
+				<a href="#home" class="logo">codeGray</a>
 				<nav>
-					<a href="#">Home</a>
-					<a href="#">About</a>
-					<a href="#">Projects</a>
-					<a href="#">Contact</a>
+					<a href="#home">Home</a>
+					<a href="#about">About</a>
+					<a href="#projects">Projects</a>
+					<a href="#contactUs">Contact</a>
 				</nav>
 			</div>
 	</header>
 	<div id="home">
-		<h1 class="home_header">codeGRAY</h1>
-		<h2 class="home_description">We craft clean, responsive code for web and mobile.</h2>
+		<div class="home_inner">
+			<h1 class="home_header">codeGRAY</h1>
+			<h2 class="home_description">We craft clean, responsive code for web and mobile.</h2>
+		</div>
 	</div>
 	<div id="about" class="section">
 		<h1 class="section_header about_header">About</h1>
@@ -179,15 +186,18 @@ JAVASCRIPT:
 	</div>
 
 	<div id="contactUs" class="section">
-		<h1 class="section_header contactUs_header">contact us</h1>
-		<h2 class="contactUs_description">We're available for freelance work, so please do say hello!</h2>
-		<form class="contact_form">
-			<input type="text" id="first_name"placeholder="First Name">
-  			<input type="text" id="last_name" placeholder="Last Name">
-  			<input type="email" id="email" placeholder="eMail">
-  			<input type="text" id="message" placeholder="Message">
-  			<input type="submit" value="Submit">
-		</form>
+		<div class="contactUs_inner">
+			<h1 class="section_header contactUs_header">contact us</h1>
+			<h2 class="contactUs_description">We're available for freelance work, so please do say hello!</h2>
+			<form class="contact_form">
+				<input type="text" id="first_name"placeholder="First Name">
+			  	<input type="text" id="last_name" placeholder="Last Name">
+				<input type="email" id="email" placeholder="eMail">
+				<textarea name="message" id="message" rows="3" placeholder="Message"></textarea>
+				<!-- <te type="textarea" id="message" placeholder="Message"> -->
+				<input class="contact_submit" type="submit" value="Submit">
+			</form>
+		</div>
 	</div>
 
 	<footer>
@@ -203,6 +213,7 @@ JAVASCRIPT:
 	DELETE ME WHEN READY
 </div>
  -->
-
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"></script>
+	<script src="js/app.js"></script>
 </body>
 </html>

@@ -1,3 +1,6 @@
+* {
+	box-sizing: border-box;
+}
 html {
 	height: 100%;
 	padding: 0px;
@@ -12,6 +15,7 @@ header {
 	left: 0;
 	right: 0;
 	padding: 20px 0;
+	z-index: 10;
 }
 
 .logo {
@@ -55,7 +59,7 @@ img {
 
 
 .section {
-	padding: 20px 20px 50px;
+	padding: 40px 20px 50px;
 }
 
 .section_header {
@@ -68,6 +72,15 @@ img {
 	background-color: lightgray;
 	clear: both;
 	margin-top: 56px;
+	position: relative;
+}
+
+.home_inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
 }
 
 #about {
@@ -101,13 +114,15 @@ img {
 }
 
 .about_item {
-	width: 49%;
+	width: 100%;
+	/*width: 49%;*/
 	display: inline-block;
 	font-size: initial;
 }
 
 .about_item + .about_item {
-	margin-left: 2%;
+	/*margin-left: 2%;*/
+	margin-top: 30px;
 }
 
 .about_item_image {
@@ -131,15 +146,27 @@ img {
 	/*padding: 20px 20px 50px;*/
 }
 
+.projects_header,
+.projects_description {
+	text-align: center;
+}
+
+.projects_description {
+	margin-top: 10px;
+}
+
 .project-wrapper {
 	font-size: 0;
 }
 
 .project {
 	display: inline-block;
-	width: 24%;
+	/*width: 24%;*/
+	width: 100%;
 	font-size: initial;
-	margin-left: 1%;
+	/*margin-left: 1%;*/
+	cursor: pointer;
+	margin-top: 30px;
 }
 
 .projects_header {
@@ -172,6 +199,37 @@ img {
 	background-color: silver;
 }
 
+.contactUs_inner {
+	width: 300px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.contactUs_description {
+	padding: 0 20px;
+	margin-top: 10px;
+}
+
+.contact_form input {
+	width: 100%;
+	margin-top: 10px;
+	padding: 5px 10px;
+}
+
+.contact_form textarea {
+	padding: 5px 10px;
+	margin-top: 10px;
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	max-height: 100px;
+}
+
+input.contact_submit {
+	width: auto;
+}
+
+
 footer {
 	/*height: 50px;*/
 	background-color: black;
@@ -191,4 +249,35 @@ footer {
 	text-align: center;
 	margin-top: 10px;
 }
+
+/****************************
+Media Queries
+****************************/
+
+@media screen and (min-width: 480px) {
+	.about_item {
+		width: 49%;
+	}
+
+	.about_item + .about_item {
+		margin-left: 2%;
+		margin-top: 0;
+	}
+	.project {
+		margin-left: 1%;
+		width: 48%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.project {
+		width: 32%;
+	}
+}
+
+
+
+
+
+
 
