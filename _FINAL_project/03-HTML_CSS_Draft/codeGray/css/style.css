@@ -187,11 +187,25 @@ img {
 #modals {
 	display: none;
 	position: fixed;
-	top: 0;
+	top: 56px;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	right: 0;
+	bottom: 0;
 	background-color: rgba(100,100,100,0.8);
+}
+
+/* Active class to reveal the modal container */
+#modals.is-active {
+	display: block;
+}
+
+.modal {
+	display: none;
+}
+
+/* Active class to reveal a particular modal in the modal container */
+.modal.is-active {
+	display: block;
 }
 
 #contactUs {
