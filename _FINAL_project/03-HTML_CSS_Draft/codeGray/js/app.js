@@ -119,4 +119,8 @@ $(document).on('ready', function() {
 	$('.js-projects').children().on('click', onProjectClick);
 	$('.js-modal-close').on('click', closeModal);
 	adjustHomeHeight();
+	// Create a new instance of Constellation, passing in the canvas element
+	var constellation = new Constellation(document.getElementById('constellation'));
+	// Run the initialize function for the constellation
+	constellation.init();
 })

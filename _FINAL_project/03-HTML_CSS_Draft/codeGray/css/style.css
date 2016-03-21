@@ -1,12 +1,21 @@
 * {
 	box-sizing: border-box;
 }
-html {
-	height: 100%;
-	padding: 0px;
-	margin: 0px;
+
+html, body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
 }
 
+/* Set to dark blue so scrolling beyond parameters doesn't reveal white */
+body {
+  background-color: #283048;
+  font-family: "Jura", Verdana, sans-serif;
+  color: silver;
+}
+
+/* import the icon font */
 @font-face {
     font-family: 'icomoon';
     src:    url('../fonts/icomoon/icomoon.eot?ajyegb');
@@ -33,6 +42,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* classes for icon font */
 .icon-mail4:before {
     content: "\e900";
 }
@@ -59,18 +69,20 @@ html {
 
 header {
 	/*height: 50px;*/
-	background-color: black;
+	background-color: #283048;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	padding: 20px 0;
 	z-index: 10;
+
 }
 
 .logo {
 	float: left;
-	color: white;
+	color: silver;
+	font-size: 21px;
 }
 
 /*nav {
@@ -97,19 +109,26 @@ img {
 }
 
 .nav nav a {
+	font-size: 17px;
 	margin-left: 10px;
-	color: #fff;
+	padding: 7px 10px;
+	color: silver;
 	transition: color 100ms ease;
 	-webkit-transition: color 100ms ease;
 	/*add other vendor prefixes*/
 }
 
-.nav nav a:hover 	{ color: #aaa; }
-.nav nav a:visited 	{ color: #fff; }
+.nav nav a:last-child {
+	border: 3px solid #d35400;
+	border-radius: 5px;
+}
+
+.nav nav a:hover 	{ color: #95a5a6; }
+.nav nav a:visited 	{ color: silver; }
 
 
 .section {
-	padding: 40px 20px 50px;
+	padding: 40px 20px 60px;
 }
 
 .section_header {
@@ -119,7 +138,7 @@ img {
 #home {
 	/*I want this to be the size of the browser on load */
 	height: 450px;
-	background-color: lightgray;
+	/*background-color: lightgray;*/
 	clear: both;
 	margin-top: 56px;
 	position: relative;
@@ -133,9 +152,21 @@ img {
 	text-align: center;
 }
 
+.home_header {
+	font-size: 61px;
+}
+
+.home_description {
+	font-size: 21px;
+	line-height: 150%;
+}
+
 #about {
 	/*min-height: 450px;*/
-	background-color: dimgray;
+	background: linear-gradient( rgba(40, 48, 72, .85), rgba(40, 48, 72, .85)), url("../images/about_background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	/*background-color: dimgray;*/
 	/*padding: 20px 20px 50px;*/
 }
 
@@ -192,7 +223,10 @@ img {
 
 #projects {
 	/*height: 450px;*/
-	background-color: darkgray;
+	background: linear-gradient( rgba(40, 48, 72, .85), rgba(40, 48, 72, .85)), url("../images/projects_background_bw.jpeg");
+	background-size: auto 110%;
+	background-position: bottom center;
+	background-repeat: no-repeat;
 	/*padding: 20px 20px 50px;*/
 }
 
@@ -260,7 +294,10 @@ img {
 
 #contactUs {
 	height: 450px;
-	background-color: silver;
+	background: linear-gradient( rgba(40, 48, 72, .85), rgba(40, 48, 72, .85)), url("../images/contact_background_bw.jpeg");
+	background-size: auto 110%;
+	background-position: bottom center;
+	background-repeat: no-repeat;
 }
 
 .contactUs_inner {
@@ -296,7 +333,7 @@ input.contact_submit {
 
 footer {
 	/*height: 50px;*/
-	background-color: black;
+	background-color: transparent;
 	padding: 15px 0;
 }
 
